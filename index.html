@@ -145,7 +145,7 @@
     <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0px;">
       <div class="column is-four-fifths" style="width: 949px !important;" ">
         <h2 class="title is-3" style="height: 20px; !important;">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified; style="font-size: 1.25em">
           <p>
             Personalized text-to-video (PT2V) generation aims to adapt a pretrained text-to-video model to generate customized videos of a unique subject or motion, via finetuning. To handle this problem, most of existing methods either employ image-based customization, or upgrade it with motion customization, or leverage large-scale video datasets to train subject-to-video generation. Though effective at large, these methods are not easily comparable to each other due to different backbones and implementations. In this work, we systematically analyze PT2V under the setting of LoRA finetuning by comparing three basic approaches among which we suggest a simple baseline VideoLoRA. In particular, we introduce a structured caption strategy to optimize video text descriptions and enable both subject and motion personalization. In addition, to facilitate evaluation, we curate a video dataset called PT2V-Bench, which includes videos and structured captions for 20 distinct subjects. Our results demonstrate that all three basic approaches can generate high-quality personalized videos, while VideoLoRA even captures the unique motion of the subject which is not observed in state-of-the-art methods.
           </p>
@@ -159,11 +159,11 @@
 <!-- Method. -->
 <section class="hero is-small" style="margin-top:-30px; margin-bottom:-30px;">
   <div class="container is-max-desktop; justify-content: center;">
-    <div class="hero-body" style="width: 1369px;">
+    <div class="hero-body" style="width: 1380px;">
       <div class="columns is-centered has-text-centered">
-        <div class="column" style="width: 1369px; padding-top: 48px !important; padding-bottom: 0px !important;">
+        <div class="column" style="width: 1380px; padding-top: 50px !important; padding-bottom: 0px !important;">
           <h2 class="title is-3 is-centered">The PT2V-Bench</h2>
-          <div class="publication-img" style="display: flex; justify-content: center; gap: 0; max-width: 1369px; overflow: hidden;">
+          <div class="publication-img" style="display: flex; justify-content: center; gap: 0; max-width: 1380px; overflow: hidden;">
             <img src="./static/images/video_collection.gif" style="height: 480px; width: auto; margin: 0; padding: 0;" />
             <img src="./static/images/Multi.gif" style="height: 480px; width: auto; margin: 0; padding: 0;" />
             <img src="./static/images/per_caption.gif" style="height: 480px; width: auto; margin: 0; padding: 0;" />
