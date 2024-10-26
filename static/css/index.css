@@ -48,6 +48,8 @@ body {
 }
 
 .publication-title {
+    width: 100%; /* 或者 80%，取决于所需的宽度 */
+    text-align: center; /* 保持居中 */
     font-family: 'Google Sans', sans-serif;
 }
 
