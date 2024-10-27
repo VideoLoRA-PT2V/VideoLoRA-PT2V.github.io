@@ -192,7 +192,7 @@
         <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
         <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
           <!-- 包含视频的滑动容器 -->
-          <div id="carouselContainer" class="video-scroll" style="display: flex; transition: transform 1s ease; gap: 30px;">
+          <div id="carouselContainer" class="video-scroll">
             <video autoplay muted loop playsinline style="width: 445px;">
               <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
             </video>
@@ -208,8 +208,14 @@
           </div>
         </div>
         <!-- 左右切换按钮 -->
-        <button onclick="prevVideos()" style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%);">❮</button>
-        <button onclick="nextVideos()" style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%);">❯</button>
+        <button onclick="prevVideos()" class="carousel-btn left">❮</button>
+        <button onclick="nextVideos()" class="carousel-btn right">❯</button>
+        
+        <!-- 滑动页面的圆点提示 -->
+        <div class="pagination-dots" id="paginationDots">
+          <span class="dot" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -218,42 +224,91 @@
 <style>
 .video-scroll {
   display: flex;
-  transition: transform 1s ease; /* 平滑滑动效果 */
-  gap: 30px; /* 视频之间的间距 */
+  transition: transform 1s ease;
+  gap: 30px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-btn.left {
+  left: 20px;
+}
+
+.carousel-btn.right {
+  right: 20px;
+}
+
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #aaa;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
 }
 </style>
 
 <script>
-  // 视频源路径数组
-  const videoSources = [
-    './static/videos/nailong/gen/nailong.mp4',
-    './static/videos/nailong/gen/ood_video.mp4',
-    './static/videos/nailong/gen/nailong_video_stru.mp4',
-    './static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4'
-  ];
+const videoSources = [
+  './static/videos/nailong/gen/nailong.mp4',
+  './static/videos/nailong/gen/ood_video.mp4',
+  './static/videos/nailong/gen/nailong_video_stru.mp4',
+  './static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4'
+];
 
-  let currentIndex = 0; // 当前展示的起始索引
-  const carouselContainer = document.getElementById('carouselContainer');
+let currentIndex = 0;
+const carouselContainer = document.getElementById('carouselContainer');
+const dots = document.getElementById('paginationDots').children;
 
-  // 更新视频显示的函数，设置平移偏移量
-  function updateVideos() {
-    carouselContainer.style.transform = `translateX(-${currentIndex * 475}px)`;
+// 更新视频显示
+function updateVideos() {
+  carouselContainer.style.transform = `translateX(-${currentIndex * 475}px)`;
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.toggle('active', i === Math.floor(currentIndex / 2));
   }
+}
 
-  // 下一页
-  function nextVideos() {
-    currentIndex = (currentIndex + 2) % videoSources.length;
-    updateVideos();
-  }
+function nextVideos() {
+  currentIndex = (currentIndex + 2) % videoSources.length;
+  updateVideos();
+}
 
-  // 上一页
-  function prevVideos() {
-    currentIndex = (currentIndex - 2 + videoSources.length) % videoSources.length;
-    updateVideos();
-  }
+function prevVideos() {
+  currentIndex = (currentIndex - 2 + videoSources.length) % videoSources.length;
+  updateVideos();
+}
 
-  // 自动切换每6秒
-  setInterval(nextVideos, 6000);
+function goToSlide(slideIndex) {
+  currentIndex = slideIndex * 2;
+  updateVideos();
+}
+
+// 自动切换每6秒
+setInterval(nextVideos, 6000);
 </script>
 
 
