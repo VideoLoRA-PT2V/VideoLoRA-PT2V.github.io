@@ -163,12 +163,12 @@
 <!-- Method. -->
 
 
-<section>
+<!-- <section>
   <div class="container" style="width: 1380px; margin: 0 auto; margin-top: -100px; margin-bottom: -50px; display: flex; flex-direction: column; gap: 40px;">
     
-    <!-- 第一行，包含标题 -->
+ 
     <div class="row" style="display: flex; gap: 40px;">
-      <!-- 左侧列：Reference Videos (4个重叠视频) -->
+ 
       <div style="width: 420px; position: relative;">
         <h2 class="title is-4 has-text-centered">Reference Videos</h2>
         <div class="reference-videos">
@@ -187,11 +187,11 @@
         </div>
       </div>
 
-      <!-- 右侧列：每次显示两个视频并滑动切换 -->
+  
       <div style="width: 920px; position: relative;">
         <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
         <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
-          <!-- 包含视频的滑动容器 -->
+   
           <div id="carouselContainer" class="video-scroll">
             <video autoplay muted loop playsinline style="width: 445px;">
               <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -207,11 +207,11 @@
             </video>
           </div>
         </div>
-        <!-- 左右切换按钮 -->
+ 
         <button onclick="prevVideos()" class="carousel-btn left">❮</button>
         <button onclick="nextVideos()" class="carousel-btn right">❯</button>
         
-        <!-- 滑动页面的圆点提示 -->
+ 
         <div class="pagination-dots" id="paginationDots">
           <span class="dot" onclick="goToSlide(0)"></span>
           <span class="dot" onclick="goToSlide(1)"></span>
@@ -219,7 +219,261 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+
+<section>
+  <div class="container" style="width: 1380px; margin: 0 auto; margin-top: -100px; margin-bottom: -50px; display: flex; flex-direction: column; gap: 40px;">
+
+    <!-- 5 rows of video sections -->
+    <div class="video-section" style="display: flex; gap: 40px;">
+      <!-- Left Column: Reference Videos -->
+      <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Right Column: Video Carousel -->
+      <div style="width: 920px; position: relative;">
+        <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
+          <div id="carouselContainer1" class="video-scroll">
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button onclick="prevVideos(1)" class="carousel-btn left">❮</button>
+        <button onclick="nextVideos(1)" class="carousel-btn right">❯</button>
+        <div class="pagination-dots" id="paginationDots1">
+          <span class="dot" onclick="goToSlide(1, 0)"></span>
+          <span class="dot" onclick="goToSlide(1, 1)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat the same structure for the next rows -->
+    <div class="video-section" style="display: flex; gap: 40px;">
+      <!-- Left Column: Reference Videos -->
+      <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Right Column: Video Carousel -->
+      <div style="width: 920px; position: relative;">
+        <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
+          <div id="carouselContainer2" class="video-scroll">
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button onclick="prevVideos(2)" class="carousel-btn left">❮</button>
+        <button onclick="nextVideos(2)" class="carousel-btn right">❯</button>
+        <div class="pagination-dots" id="paginationDots2">
+          <span class="dot" onclick="goToSlide(2, 0)"></span>
+          <span class="dot" onclick="goToSlide(2, 1)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat this block for the remaining three rows -->
+    <!-- Third Row -->
+    <div class="video-section" style="display: flex; gap: 40px;">
+      <!-- Left Column: Reference Videos -->
+      <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Right Column: Video Carousel -->
+      <div style="width: 920px; position: relative;">
+        <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
+          <div id="carouselContainer3" class="video-scroll">
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button onclick="prevVideos(3)" class="carousel-btn left">❮</button>
+        <button onclick="nextVideos(3)" class="carousel-btn right">❯</button>
+        <div class="pagination-dots" id="paginationDots3">
+          <span class="dot" onclick="goToSlide(3, 0)"></span>
+          <span class="dot" onclick="goToSlide(3, 1)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fourth Row -->
+    <div class="video-section" style="display: flex; gap: 40px;">
+      <!-- Left Column: Reference Videos -->
+      <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Right Column: Video Carousel -->
+      <div style="width: 920px; position: relative;">
+        <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
+          <div id="carouselContainer4" class="video-scroll">
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button onclick="prevVideos(4)" class="carousel-btn left">❮</button>
+        <button onclick="nextVideos(4)" class="carousel-btn right">❯</button>
+        <div class="pagination-dots" id="paginationDots4">
+          <span class="dot" onclick="goToSlide(4, 0)"></span>
+          <span class="dot" onclick="goToSlide(4, 1)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fifth Row -->
+    <div class="video-section" style="display: flex; gap: 40px;">
+      <!-- Left Column: Reference Videos -->
+      <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Right Column: Video Carousel -->
+      <div style="width: 920px; position: relative;">
+        <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
+          <div id="carouselContainer5" class="video-scroll">
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 445px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button onclick="prevVideos(5)" class="carousel-btn left">❮</button>
+        <button onclick="nextVideos(5)" class="carousel-btn right">❯</button>
+        <div class="pagination-dots" id="paginationDots5">
+          <span class="dot" onclick="goToSlide(5, 0)"></span>
+          <span class="dot" onclick="goToSlide(5, 1)"></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>       
+
 
 <style>
 .video-scroll {
@@ -272,7 +526,7 @@
 }
 </style>
 
-<script>
+<!-- <script>
 const videoSources = [
   './static/videos/nailong/gen/nailong.mp4',
   './static/videos/nailong/gen/ood_video.mp4',
@@ -284,7 +538,7 @@ let currentIndex = 0;
 const carouselContainer = document.getElementById('carouselContainer');
 const dots = document.getElementById('paginationDots').children;
 
-// 更新视频显示
+
 function updateVideos() {
   carouselContainer.style.transform = `translateX(-${currentIndex * 475}px)`;
   for (let i = 0; i < dots.length; i++) {
@@ -307,8 +561,72 @@ function goToSlide(slideIndex) {
   updateVideos();
 }
 
-// 自动切换每6秒
 setInterval(nextVideos, 6000);
+</script> -->
+
+<script>
+
+let currentVideoIndex = [0, 0, 0, 0, 0]; // 当前视频索引数组，分别对应每一行的视频
+const videosPerCarousel = 4; // 每个轮播显示的视频数量
+
+function showVideos(carouselIndex) {
+  const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
+  const videos = carouselContainer.getElementsByTagName('video');
+  
+  // 隐藏所有视频
+  for (let i = 0; i < videos.length; i++) {
+    videos[i].style.display = 'none';
+  }
+
+  // 显示当前索引对应的视频
+  for (let i = 0; i < videosPerCarousel; i++) {
+    const index = currentVideoIndex[carouselIndex - 1] + i;
+    if (index < videos.length) {
+      videos[index].style.display = 'block';
+    }
+  }
+}
+
+function nextVideos(carouselIndex) {
+  const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
+  const videos = carouselContainer.getElementsByTagName('video');
+  
+  // 更新当前视频索引
+  currentVideoIndex[carouselIndex - 1] += 1;
+
+  // 如果索引超出视频数量，则回到起始位置
+  if (currentVideoIndex[carouselIndex - 1] + videosPerCarousel > videos.length) {
+    currentVideoIndex[carouselIndex - 1] = 0;
+  }
+
+  showVideos(carouselIndex);
+}
+
+function prevVideos(carouselIndex) {
+  const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
+  const videos = carouselContainer.getElementsByTagName('video');
+
+  // 更新当前视频索引
+  currentVideoIndex[carouselIndex - 1] -= 1;
+
+  // 如果索引小于0，则跳到最后一组视频
+  if (currentVideoIndex[carouselIndex - 1] < 0) {
+    currentVideoIndex[carouselIndex - 1] = Math.max(0, videos.length - videosPerCarousel);
+  }
+
+  showVideos(carouselIndex);
+}
+
+function goToSlide(carouselIndex, slideIndex) {
+  currentVideoIndex[carouselIndex - 1] = slideIndex;
+  showVideos(carouselIndex);
+}
+
+// 初始化所有轮播视频显示
+for (let i = 1; i <= 5; i++) {
+  showVideos(i);
+}
+
 </script>
 
 
