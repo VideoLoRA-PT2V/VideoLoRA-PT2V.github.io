@@ -166,18 +166,18 @@
 <section>
   <div class="container is-max-desktop" style="margin-top:-100px; margin-bottom:-50px;">
     <div class="columns">
-      <!-- Left Column: Reference Videos (4 overlapping videos) -->
-      <div class="column is-half" style="position: relative;">
+      <!-- 左侧列：Reference Videos (4个重叠视频) -->
+      <div class="column is-one-third" style="position: relative;">
         <h2 class="title is-4 has-text-centered">Reference Videos</h2>
         <div class="reference-videos">
           <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; opacity: 0.75;">
-            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
           </video>
           <video autoplay muted loop playsinline style="position: absolute; top: 20px; left: 20px; width: 100%; opacity: 0.75;">
-            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
           </video>
           <video autoplay muted loop playsinline style="position: absolute; top: 40px; left: 40px; width: 100%; opacity: 0.75;">
-            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
           </video>
           <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 60px; width: 100%; opacity: 0.75;">
             <source src="./static/videos/nailong/5.mp4" type="video/mp4">
@@ -185,27 +185,43 @@
         </div>
       </div>
 
-      <!-- 右侧列：水平滚动视频画廊 -->
-      <div class="column is-half">
+      <!-- 右侧列：自动水平滚动视频画廊 -->
+      <div class="column is-two-thirds">
         <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
-        <div class="video-gallery" style="display: flex; overflow-x: auto; gap: 10px;">
+        <div class="video-gallery" style="display: flex; gap: 10px; overflow: hidden; animation: scroll 10s linear infinite;">
           <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/result1.mp4" type="video/mp4">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
           </video>
           <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/result2.mp4" type="video/mp4">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
           </video>
           <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/result3.mp4" type="video/mp4">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
           </video>
           <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/result4.mp4" type="video/mp4">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+/* 自动滚动动画 */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.video-gallery {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  width: 200%; /* 扩展宽度以实现滚动效果 */
+  animation: scroll 10s linear infinite;
+}
+</style>
 
 
 <!-- Results -->
