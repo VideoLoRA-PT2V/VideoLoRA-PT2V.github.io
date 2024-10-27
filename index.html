@@ -187,270 +187,76 @@
         </div>
       </div>
 
-      <!-- 右侧列：自动无缝滚动显示4个视频 -->
+      <!-- 右侧列：每次显示两个视频并自动或手动切换 -->
       <div style="width: 920px;">
         <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
-        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 第二到第五行，没有标题 -->
-    <div class="row" style="display: flex; gap: 40px;">
-      <!-- 左侧列：重复视频内容 -->
-      <div style="width: 420px; position: relative;">
-        <div class="reference-videos">
-          <video autoplay muted loop playsinline style="position: absolute; top: 10px; left: 20px; width: 55%;">
-            <source src="./static/videos/Sitic/1.mp4" type="video/mp4">
+        <div class="video-carousel" id="carouselContainer" style="display: flex; gap: 10px;">
+          <!-- 初始化前两个视频 -->
+          <video autoplay muted loop playsinline style="width: 430px;">
+            <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
           </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 136px; left: 170px; width: 55%;">
-            <source src="./static/videos/Sitic/2.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 110px; left: 0px; width: 55%;">
-            <source src="./static/videos/Sitic/3.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 30px; left: 200px; width: 55%;">
-            <source src="./static/videos/Sitic/5.mp4" type="video/mp4">
+          <video autoplay muted loop playsinline style="width: 430px;">
+            <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
           </video>
         </div>
-      </div>
-
-      <!-- 右侧列：自动无缝滚动显示视频 -->
-      <div style="width: 920px;">
-        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/1.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/4.mp4 type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/1.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/4.mp4 type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 复制以上.row内容，创建第三到第五行 -->
-    <div class="row" style="display: flex; gap: 40px;">
-      <!-- 复制内容同上 -->
-       <!-- 左侧列：重复视频内容 -->
-      <div style="width: 420px; position: relative;">
-        <div class="reference-videos">
-          <video autoplay muted loop playsinline style="position: absolute; top: 10px; left: 20px; width: 55%;">
-            <source src="./static/videos/Su7/2.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 136px; left: 170px; width: 55%;">
-            <source src="./static/videos/Su7/3.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 110px; left: 0px; width: 55%;">
-            <source src="./static/videos/Su7/4.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 30px; left: 200px; width: 55%;">
-            <source src="./static/videos/Su7/5.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- 右侧列：自动无缝滚动显示视频 -->
-      <div style="width: 920px;">
-        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/3.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/su7_id.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/4.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/2.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/3.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/su7_id.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/4.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/Su7/gen/2.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="display: flex; gap: 40px;">
-      <!-- 复制内容同上 -->
-       <!-- 左侧列：重复视频内容 -->
-      <div style="width: 420px; position: relative;">
-        <div class="reference-videos">
-          <video autoplay muted loop playsinline style="position: absolute; top: 10px; left: 20px; width: 55%;">
-            <source src="./static/videos/bingmayong/2.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 136px; left: 170px; width: 55%;">
-            <source src="./static/videos/bingmayong/1.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 110px; left: 0px; width: 55%;">
-            <source src="./static/videos/bingmayong/6.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 30px; left: 200px; width: 55%;">
-            <source src="./static/videos/bingmayong/4.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- 右侧列：自动无缝滚动显示视频 -->
-      <div style="width: 920px;">
-        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/0.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/2.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/4.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/8.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/0.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/2.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/4.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/bingmayong/gen/8.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="display: flex; gap: 40px;">
-      <!-- 复制内容同上 -->
-       <!-- 左侧列：重复视频内容 -->
-      <div style="width: 420px; position: relative;">
-        <div class="reference-videos">
-          <video autoplay muted loop playsinline style="position: absolute; top: 10px; left: 20px; width: 55%;">
-            <source src="./static/videos/sanxingdui/1.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 136px; left: 170px; width: 55%;">
-            <source src="./static/videos/sanxingdui/2.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 110px; left: 0px; width: 55%;">
-            <source src="./static/videos/sanxingdui/3.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 30px; left: 200px; width: 55%;">
-            <source src="./static/videos/sanxingdui/5.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- 右侧列：自动无缝滚动显示视频 -->
-      <div style="width: 920px;">
-        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/0.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/1.mp4 type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/3.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/4.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/0.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/1.mp4 type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/3.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
-              <source src="./static/videos/sanxingdui/gen/4.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- 控制按钮 -->
+        <div class="controls" style="text-align: center; margin-top: 10px;">
+          <button onclick="prevVideos()">上一页</button>
+          <button onclick="nextVideos()">下一页</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<style>
-/* 自动连续滚动动画 */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
+<script>
+  // 视频源路径数组
+  const videoSources = [
+    './static/videos/nailong/gen/nailong.mp4',
+    './static/videos/nailong/gen/ood_video.mp4',
+    './static/videos/nailong/gen/nailong_video_stru.mp4',
+    './static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4'
+  ];
+  
+  let currentIndex = 0; // 当前展示的视频起始索引
+  const carouselContainer = document.getElementById('carouselContainer');
 
-.video-carousel {
-  width: 100%;
-  overflow: hidden;
-}
+  // 更新视频显示函数
+  function updateVideos() {
+    carouselContainer.innerHTML = ""; // 清空现有视频
+    for (let i = 0; i < 2; i++) { // 每次加载两个视频
+      const video = document.createElement('video');
+      video.autoplay = true;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.style.width = '430px';
+      const source = document.createElement('source');
+      source.src = videoSources[(currentIndex + i) % videoSources.length];
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      carouselContainer.appendChild(video);
+    }
+  }
 
-.video-scroll {
-  display: flex;
-  width: 200%; /* 设置2倍宽度以支持无缝滚动 */
-}
-</style>
+  // 下一页
+  function nextVideos() {
+    currentIndex = (currentIndex + 2) % videoSources.length;
+    updateVideos();
+  }
+
+  // 上一页
+  function prevVideos() {
+    currentIndex = (currentIndex - 2 + videoSources.length) % videoSources.length;
+    updateVideos();
+  }
+
+  // 自动切换每10秒
+  setInterval(nextVideos, 10000);
+
+  // 初始化
+  updateVideos();
+</script>
 
 
 <!-- Results -->
