@@ -189,7 +189,8 @@
     <div style="width: 920px;">
       <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
       <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-        <div class="video-scroll" style="display: flex; gap: 10px; animation: scroll 10s linear infinite;">
+        <div class="video-scroll" style="display: flex; animation: scroll 10s linear infinite;">
+          <!-- 第一个视频集合 -->
           <video autoplay muted loop playsinline style="width: 430px;">
             <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
           </video>
@@ -202,7 +203,7 @@
           <video autoplay muted loop playsinline style="width: 430px;">
             <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
           </video>
-          <!-- 额外重复的视频，用于实现无缝滚动效果 -->
+          <!-- 完全重复的视频集合，确保滚动时无缝连接 -->
           <video autoplay muted loop playsinline style="width: 430px;">
             <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
           </video>
@@ -226,7 +227,7 @@
 /* 自动连续滚动动画 */
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
 }
 
 .video-carousel {
@@ -238,7 +239,7 @@
   display: flex;
   width: 200%; /* 设置2倍宽度以支持无缝滚动 */
 }
-</style>s
+</style>
 
 
 <!-- Results -->
