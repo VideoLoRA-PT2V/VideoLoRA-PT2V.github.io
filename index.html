@@ -575,10 +575,18 @@ function goToSlide(carouselIndex, slideIndex) {
   showVideos(carouselIndex);
 }
 
-// 初始化所有轮播视频显示
+// 每隔几秒自动切换视频，单位为毫秒
+const autoSlideInterval = 6000; // 自动切换间隔时间，3000毫秒即3秒
+
+// 初始化所有轮播视频显示并添加自动轮播功能
 for (let i = 1; i <= 5; i++) {
   showVideos(i);
+  // 为每个轮播容器设置定时器
+  setInterval(() => {
+    nextVideos(i);
+  }, autoSlideInterval);
 }
+
 </script>
 
 
