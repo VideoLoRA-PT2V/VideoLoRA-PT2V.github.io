@@ -185,22 +185,24 @@
         </div>
       </div>
 
-      <!-- 右侧列：自动水平滚动视频画廊 -->
+      <!-- 右侧列：自动滚动显示4个视频 -->
       <div class="column is-two-thirds">
         <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
-        <div class="video-gallery" style="display: flex; gap: 10px; overflow: hidden; animation: scroll 10s linear infinite;">
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
-          </video>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
+          <div class="video-scroll" style="display: flex; gap: 10px; animation: scroll 12s linear infinite;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/9.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
@@ -211,15 +213,20 @@
 /* 自动滚动动画 */
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
 }
 
-.video-gallery {
-  display: flex;
-  gap: 10px;
+.video-carousel {
+  width: 100%;
   overflow: hidden;
-  width: 200%; /* 扩展宽度以实现滚动效果 */
-  animation: scroll 10s linear infinite;
+}
+
+.video-scroll {
+  display: flex;
+  width: 400%; /* 设置4倍宽度以容纳4个视频 */
 }
 </style>
 
