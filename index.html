@@ -164,62 +164,214 @@
 
 
 <section>
-  <div class="container" style="width: 1380px; margin: 0 auto; margin-top: -100px; margin-bottom: -50px; display: flex; gap: 40px;">
+  <div class="container" style="width: 1380px; margin: 0 auto; margin-top: -100px; margin-bottom: -50px; display: flex; flex-direction: column; gap: 40px;">
     
-    <!-- 左侧列：Reference Videos (4个重叠视频) -->
-    <div style="width: 420px; position: relative;">
-      <h2 class="title is-4 has-text-centered">Reference Videos</h2>
-      <div class="reference-videos">
-        <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
-          <source src="./static/videos/nailong/2.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
-          <source src="./static/videos/nailong/3.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
-          <source src="./static/videos/nailong/4.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
-          <source src="./static/videos/nailong/5.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <!-- 右侧列：自动无缝滚动显示4个视频 -->
-    <div style="width: 920px;">
-      <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
-      <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-        <div class="video-scroll" style="display: flex; animation: scroll 15s linear infinite;">
-          <!-- 视频重复部分，用于无缝滚动 -->
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+    <!-- 第一行 -->
+    <div class="row" style="display: flex; gap: 40px;">
+      <!-- 左侧列：Reference Videos (4个重叠视频) -->
+      <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
           </video>
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
           </video>
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
           </video>
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
-          </video>
-          <!-- 再次重复视频集合，确保无缝循环播放 -->
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+
+      <!-- 右侧列：自动无缝滚动显示4个视频 -->
+      <div style="width: 920px;">
+        <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
+          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+          </div>
+        </div>
+      </div>
     </div>
-    
+
+    <!-- 第二行到第五行的内容 -->
+    <div class="row" style="display: flex; gap: 40px;">
+       <!-- 左侧列：Reference Videos (4个重叠视频) -->
+       <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- 右侧列：自动无缝滚动显示4个视频 -->
+      <div style="width: 920px;">
+        <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
+          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 第三行 -->
+    <div class="row" style="display: flex; gap: 40px;">
+       <!-- 左侧列：Reference Videos (4个重叠视频) -->
+       <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- 右侧列：自动无缝滚动显示4个视频 -->
+      <div style="width: 920px;">
+        <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
+          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 第四行 -->
+    <div class="row" style="display: flex; gap: 40px;">
+         <!-- 左侧列：Reference Videos (4个重叠视频) -->
+         <div style="width: 420px; position: relative;">
+          <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+          <div class="reference-videos">
+            <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+              <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+              <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+              <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+              <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+        <!-- 右侧列：自动无缝滚动显示4个视频 -->
+        <div style="width: 920px;">
+          <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
+          <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
+            <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
+              <video autoplay muted loop playsinline style="width: 430px;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+              <video autoplay muted loop playsinline style="width: 430px;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+              <video autoplay muted loop playsinline style="width: 430px;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+              <video autoplay muted loop playsinline style="width: 430px;">
+                <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- 第五行 -->
+    <div class="row" style="display: flex; gap: 40px;">
+      <!-- 左侧列：Reference Videos (4个重叠视频) -->
+      <div style="width: 420px; position: relative;">
+        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
+        <div class="reference-videos">
+          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
+            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
+            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
+            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
+            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- 右侧列：自动无缝滚动显示4个视频 -->
+      <div style="width: 920px;">
+        <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
+          <div class="video-scroll" style="display: flex; animation: scroll 20s linear infinite;">
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
