@@ -520,88 +520,86 @@
   }
   </style>
   
-  <script>
-  let currentVideoIndex = [0, 0, 0, 0, 0]; // 每行当前视频索引
-  const videosPerCarousel = 4; // 每个轮播显示的视频数量
-  const autoSlideInterval = 6000; // 自动切换间隔时间
-  const slideAmount = 2; // 每次滑动的视频数量
-  let autoSlideTimers = []; // 存储每个行的定时器
-  
-  // 显示视频并更新圆点
-  function showVideos(carouselIndex) {
-    const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
-    const videos = carouselContainer.getElementsByTagName('video');
-    const dots = document.getElementById(`paginationDots${carouselIndex}`).getElementsByClassName('dot');
-  
-    // 计算偏移量，实现滑动效果
-    const offset = -currentVideoIndex[carouselIndex - 1] * 460; // 每个视频宽度为445px
-    carouselContainer.style.transform = `translateX(${offset}px)`;
-  
-    // 更新圆点
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].classList.remove('active');
+    
+    <script>
+    let currentVideoIndex = [0, 0, 0, 0, 0]; // 每行当前视频索引
+    const videoWidth = 445; // 每个视频的宽度
+    const gap = 30; // 图片之间的空隙
+    const slideAmount = 2; // 每次滑动的视频数量
+    const autoSlideInterval = 6000; // 自动切换间隔时间，单位为毫秒
+    let autoSlideTimers = []; // 存储每个行的定时器
+    
+    function showVideos(carouselIndex) {
+      const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
+      const dots = document.getElementById(`paginationDots${carouselIndex}`).getElementsByClassName('dot');
+    
+      // 计算总偏移量，包含图片宽度和空隙
+      const offset = -(currentVideoIndex[carouselIndex - 1] * (videoWidth + gap));
+      carouselContainer.style.transform = `translateX(${offset}px)`;
+    
+      // 更新分页圆点的样式
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
+      }
+      const activeDotIndex = Math.floor(currentVideoIndex[carouselIndex - 1] / slideAmount);
+      dots[activeDotIndex].classList.add('active');
     }
-    const activeDotIndex = Math.floor(currentVideoIndex[carouselIndex - 1] / slideAmount);
-    dots[activeDotIndex].classList.add('active');
-  }
-  
-  // 下一组视频
-  function nextVideos(carouselIndex) {
-    const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
-    const videos = carouselContainer.getElementsByTagName('video');
-  
-    // 更新当前视频索引
-    currentVideoIndex[carouselIndex - 1] += slideAmount;
-  
-    // 如果索引超出视频数量，则回到起始位置
-    if (currentVideoIndex[carouselIndex - 1] >= videos.length) {
-      currentVideoIndex[carouselIndex - 1] = 0;
+    
+    function nextVideos(carouselIndex) {
+      const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
+      const videos = carouselContainer.getElementsByTagName('video');
+    
+      // 更新当前视频索引
+      currentVideoIndex[carouselIndex - 1] += slideAmount;
+    
+      // 如果索引超出视频数量，则回到起始位置
+      if (currentVideoIndex[carouselIndex - 1] >= videos.length) {
+        currentVideoIndex[carouselIndex - 1] = 0;
+      }
+    
+      resetAutoSlide(carouselIndex); // 重设自动轮播
+      showVideos(carouselIndex);
     }
-  
-    resetAutoSlide(carouselIndex); // 重设自动轮播
-    showVideos(carouselIndex);
-  }
-  
-  // 上一组视频
-  function prevVideos(carouselIndex) {
-    const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
-    const videos = carouselContainer.getElementsByTagName('video');
-  
-    // 更新当前视频索引
-    currentVideoIndex[carouselIndex - 1] -= slideAmount;
-  
-    // 如果索引小于0，则跳到最后一组视频
-    if (currentVideoIndex[carouselIndex - 1] < 0) {
-      currentVideoIndex[carouselIndex - 1] = Math.max(0, videos.length - slideAmount);
+    
+    function prevVideos(carouselIndex) {
+      const carouselContainer = document.getElementById(`carouselContainer${carouselIndex}`);
+      const videos = carouselContainer.getElementsByTagName('video');
+    
+      // 更新当前视频索引
+      currentVideoIndex[carouselIndex - 1] -= slideAmount;
+    
+      // 如果索引小于0，则跳到最后一组视频
+      if (currentVideoIndex[carouselIndex - 1] < 0) {
+        currentVideoIndex[carouselIndex - 1] = Math.max(0, videos.length - slideAmount);
+      }
+    
+      resetAutoSlide(carouselIndex); // 重设自动轮播
+      showVideos(carouselIndex);
     }
-  
-    resetAutoSlide(carouselIndex); // 重设自动轮播
-    showVideos(carouselIndex);
-  }
-  
-  // 跳转到指定页
-  function goToSlide(carouselIndex, slideIndex) {
-    currentVideoIndex[carouselIndex - 1] = slideIndex * slideAmount;
-    resetAutoSlide(carouselIndex); // 重设自动轮播
-    showVideos(carouselIndex);
-  }
-  
-  // 重设自动轮播
-  function resetAutoSlide(carouselIndex) {
-    clearInterval(autoSlideTimers[carouselIndex - 1]);
-    autoSlideTimers[carouselIndex - 1] = setInterval(() => {
-      nextVideos(carouselIndex);
-    }, autoSlideInterval);
-  }
-  
-  // 初始化每行轮播并设置自动轮播
-  for (let i = 1; i <= 5; i++) {
-    showVideos(i);
-    autoSlideTimers[i - 1] = setInterval(() => {
-      nextVideos(i);
-    }, autoSlideInterval);
-  }
-  </script>
+    
+    function goToSlide(carouselIndex, slideIndex) {
+      currentVideoIndex[carouselIndex - 1] = slideIndex * slideAmount;
+      resetAutoSlide(carouselIndex); // 重设自动轮播
+      showVideos(carouselIndex);
+    }
+    
+    // 重设自动轮播
+    function resetAutoSlide(carouselIndex) {
+      clearInterval(autoSlideTimers[carouselIndex - 1]);
+      autoSlideTimers[carouselIndex - 1] = setInterval(() => {
+        nextVideos(carouselIndex);
+      }, autoSlideInterval);
+    }
+    
+    // 初始化每行轮播并设置自动轮播
+    for (let i = 1; i <= 5; i++) {
+      showVideos(i);
+      autoSlideTimers[i - 1] = setInterval(() => {
+        nextVideos(i);
+      }, autoSlideInterval);
+    }
+    </script>
+    
 
 
 <!-- Results -->
