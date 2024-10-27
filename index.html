@@ -185,21 +185,34 @@
         </div>
       </div>
 
-      <!-- 右侧列：自动滚动显示4个视频 -->
+      <!-- 右侧列：自动无缝滚动显示4个视频 -->
       <div class="column is-two-thirds">
         <h2 class="title is-4 has-text-centered">Customized Video Results</h2>
         <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%;">
-          <div class="video-scroll" style="display: flex; gap: 10px; animation: scroll 12s linear infinite;">
-            <video autoplay muted loop playsinline style="width: 100%;">
+          <div class="video-scroll" style="display: flex; gap: 10px; animation: scroll 30s linear infinite;">
+            <video autoplay muted loop playsinline style="width: 80%;">
               <source src="./static/videos/nailong/2.mp4" type="video/mp4">
             </video>
-            <video autoplay muted loop playsinline style="width: 100%;">
+            <video autoplay muted loop playsinline style="width: 80%;">
               <source src="./static/videos/nailong/9.mp4" type="video/mp4">
             </video>
-            <video autoplay muted loop playsinline style="width: 100%;">
+            <video autoplay muted loop playsinline style="width: 80%;">
               <source src="./static/videos/nailong/5.mp4" type="video/mp4">
             </video>
-            <video autoplay muted loop playsinline style="width: 100%;">
+            <video autoplay muted loop playsinline style="width: 80%;">
+              <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+            </video>
+            <!-- 额外重复的视频，用于实现无缝滚动效果 -->
+            <video autoplay muted loop playsinline style="width: 80%;">
+              <source src="./static/videos/nailong/2.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 80%;">
+              <source src="./static/videos/nailong/9.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 80%;">
+              <source src="./static/videos/nailong/5.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 80%;">
               <source src="./static/videos/nailong/5.mp4" type="video/mp4">
             </video>
           </div>
@@ -210,13 +223,10 @@
 </section>
 
 <style>
-/* 自动滚动动画 */
+/* 自动连续滚动动画 */
 @keyframes scroll {
   0% { transform: translateX(0); }
-  25% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  75% { transform: translateX(-300%); }
-  100% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .video-carousel {
@@ -226,7 +236,7 @@
 
 .video-scroll {
   display: flex;
-  width: 400%; /* 设置4倍宽度以容纳4个视频 */
+  width: 200%; /* 设置2倍宽度以支持无缝滚动 */
 }
 </style>
 
