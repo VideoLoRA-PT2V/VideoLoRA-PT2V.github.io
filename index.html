@@ -192,17 +192,17 @@
         <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
         <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
           <!-- 包含视频的滑动容器 -->
-          <div id="carouselContainer" class="video-scroll" style="display: flex; transition: transform 1s ease;">
-            <video autoplay muted loop playsinline style="width: 430px;">
+          <div id="carouselContainer" class="video-scroll" style="display: flex; transition: transform 1s ease; gap: 30px;">
+            <video autoplay muted loop playsinline style="width: 445px;">
               <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
             </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
+            <video autoplay muted loop playsinline style="width: 445px;">
               <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
             </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
+            <video autoplay muted loop playsinline style="width: 445px;">
               <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
             </video>
-            <video autoplay muted loop playsinline style="width: 430px;">
+            <video autoplay muted loop playsinline style="width: 445px;">
               <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
             </video>
           </div>
@@ -219,6 +219,7 @@
 .video-scroll {
   display: flex;
   transition: transform 1s ease; /* 平滑滑动效果 */
+  gap: 30px; /* 视频之间的间距 */
 }
 </style>
 
@@ -236,7 +237,7 @@
 
   // 更新视频显示的函数，设置平移偏移量
   function updateVideos() {
-    carouselContainer.style.transform = `translateX(-${currentIndex * 430}px)`;
+    carouselContainer.style.transform = `translateX(-${currentIndex * 475}px)`;
   }
 
   // 下一页
@@ -251,9 +252,8 @@
     updateVideos();
   }
 
-  // 自动切换每10秒
-  setInterval(nextVideos, 10000);
-
+  // 自动切换每6秒
+  setInterval(nextVideos, 6000);
 </script>
 
 
