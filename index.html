@@ -163,65 +163,6 @@
 <!-- Method. -->
 
 
-<!-- <section>
-  <div class="container" style="width: 1380px; margin: 0 auto; margin-top: -100px; margin-bottom: -50px; display: flex; flex-direction: column; gap: 40px;">
-    
- 
-    <div class="row" style="display: flex; gap: 40px;">
- 
-      <div style="width: 420px; position: relative;">
-        <h2 class="title is-4 has-text-centered">Reference Videos</h2>
-        <div class="reference-videos">
-          <video autoplay muted loop playsinline style="position: absolute; top: 60px; left: 20px; width: 55%;">
-            <source src="./static/videos/nailong/2.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 186px; left: 170px; width: 55%;">
-            <source src="./static/videos/nailong/3.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 160px; left: 0px; width: 55%;">
-            <source src="./static/videos/nailong/4.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="position: absolute; top: 80px; left: 200px; width: 55%;">
-            <source src="./static/videos/nailong/5.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-  
-      <div style="width: 920px; position: relative;">
-        <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
-        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
-   
-          <div id="carouselContainer" class="video-scroll">
-            <video autoplay muted loop playsinline style="width: 445px;">
-              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 445px;">
-              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 445px;">
-              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width: 445px;">
-              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
- 
-        <button onclick="prevVideos()" class="carousel-btn left">❮</button>
-        <button onclick="nextVideos()" class="carousel-btn right">❯</button>
-        
- 
-        <div class="pagination-dots" id="paginationDots">
-          <span class="dot" onclick="goToSlide(0)"></span>
-          <span class="dot" onclick="goToSlide(1)"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
 <section>
   <div class="container" style="width: 1380px; margin: 0 auto; margin-top: -100px; margin-bottom: -50px; display: flex; flex-direction: column; gap: 40px;">
 
@@ -477,8 +418,8 @@
   .carousel-btn {
     position: absolute;
     top: 50%;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -490,11 +431,11 @@
   }
   
   .carousel-btn.left {
-    left: 20px;
+    left: 10px;
   }
   
   .carousel-btn.right {
-    right: 20px;
+    right: 10px;
   }
   
   .pagination-dots {
@@ -505,8 +446,8 @@
   }
   
   .dot {
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #aaa;
     cursor: pointer;
@@ -601,67 +542,6 @@
     </script>
     
 
-
-<!-- Results -->
-<!-- <section>
-  <div class="container is-max-desktop" style="margin-top:-100px; margin-bottom:-50px;">
-    <div class="hero-body">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <h2 class="title is-3 is-centered">VideoLoRA & Structured Caption Customization</h2>
-        </div>
-      </div>
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/result-comparison-both1.mp4" type="video/mp4">
-      </video>
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/result-comparison-both2.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        MotionBooth compared with baseline models for motion-aware customized video generation.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container is-max-desktop" style="margin-top:-50px; margin-bottom:-50px;">
-    <div class="hero-body">
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/result-comparison-camera1.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        MotionBooth compared with baseline models for camera control.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container is-max-desktop" style="margin-top:-50px; margin-bottom:-50px;">
-    <div class="hero-body">
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/more-results1.mp4" type="video/mp4">
-      </video>
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/more-results2.mp4" type="video/mp4">
-      </video>
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/more-results3.mp4" type="video/mp4">
-      </video>
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/more-results4.mp4" type="video/mp4">
-      </video>
-      <video id="result-comparison" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/more-results5.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        More results of MotionBooth.
-      </h2>
-    </div>
-  </div>
-</section> -->
-<!-- /Results -->
 
 <!-- BibTeX -->
 <section class="section" id="BibTeX">
