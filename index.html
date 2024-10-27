@@ -187,27 +187,40 @@
         </div>
       </div>
 
-      <!-- 右侧列：每次显示两个视频并自动或手动切换 -->
-      <div style="width: 920px;">
+      <!-- 右侧列：每次显示两个视频并滑动切换 -->
+      <div style="width: 920px; position: relative;">
         <h2 class="title is-4 has-text-centered">VideoLoRA Structured Caption Customization</h2>
-        <div class="video-carousel" id="carouselContainer" style="display: flex; gap: 10px;">
-          <!-- 初始化前两个视频 -->
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width: 430px;">
-            <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-          </video>
+        <div class="video-carousel" style="overflow: hidden; position: relative; width: 100%; display: flex;">
+          <!-- 包含视频的滑动容器 -->
+          <div id="carouselContainer" class="video-scroll" style="display: flex; transition: transform 1s ease;">
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline style="width: 430px;">
+              <source src="./static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <!-- 控制按钮 -->
-        <div class="controls" style="text-align: center; margin-top: 10px;">
-          <button onclick="prevVideos()">上一页</button>
-          <button onclick="nextVideos()">下一页</button>
-        </div>
+        <!-- 左右切换按钮 -->
+        <button onclick="prevVideos()" style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%);">❮</button>
+        <button onclick="nextVideos()" style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%);">❯</button>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+.video-scroll {
+  display: flex;
+  transition: transform 1s ease; /* 平滑滑动效果 */
+}
+</style>
 
 <script>
   // 视频源路径数组
@@ -217,26 +230,13 @@
     './static/videos/nailong/gen/nailong_video_stru.mp4',
     './static/videos/nailong/gen/Minus 2024-10-10 19.12.28.mp4'
   ];
-  
-  let currentIndex = 0; // 当前展示的视频起始索引
+
+  let currentIndex = 0; // 当前展示的起始索引
   const carouselContainer = document.getElementById('carouselContainer');
 
-  // 更新视频显示函数
+  // 更新视频显示的函数，设置平移偏移量
   function updateVideos() {
-    carouselContainer.innerHTML = ""; // 清空现有视频
-    for (let i = 0; i < 2; i++) { // 每次加载两个视频
-      const video = document.createElement('video');
-      video.autoplay = true;
-      video.muted = true;
-      video.loop = true;
-      video.playsInline = true;
-      video.style.width = '430px';
-      const source = document.createElement('source');
-      source.src = videoSources[(currentIndex + i) % videoSources.length];
-      source.type = 'video/mp4';
-      video.appendChild(source);
-      carouselContainer.appendChild(video);
-    }
+    carouselContainer.style.transform = `translateX(-${currentIndex * 430}px)`;
   }
 
   // 下一页
@@ -254,8 +254,6 @@
   // 自动切换每10秒
   setInterval(nextVideos, 10000);
 
-  // 初始化
-  updateVideos();
 </script>
 
 
