@@ -548,207 +548,205 @@
     </script>
 
 
-<section style="height: 1400px; margin-top: -20px; position: relative; overflow: hidden;">
+<section style="height: 1200px; margin-top: -20px; position: relative; overflow: hidden;">
   <h2 class="title is-4 has-text-centered" style="padding-top: 20px;">Three Baselines</h2>
-  <div class="carousel-container" style="display: flex; transition: transform 0.5s ease;">
-    <div class="container" style="width: 1380px; display: flex; flex-direction: column; gap: 40px;">
-      
-      <!-- 第一个组 -->
-      <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
-        <!-- 上半部分 -->
-        <div style="display: flex; gap: 40px; height: 200px;">
-          <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 50%; height: auto;">
-          </div>
-          <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 50%; height: auto;">
-          </div>
+  <div class="carousel-container" style="display: flex; transition: transform 0.5s ease; width: 2760px;">
+    
+    <!-- 第一个组 -->
+    <div class="group" style="width: 1380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+      <!-- 上半部分 -->
+      <div style="display: flex; gap: 40px; height: 200px;">
+        <div style="width: 400px;">
+          <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 50%; height: auto;">
         </div>
-
-        <!-- 下半部分 -->
-        <div style="display: flex; flex-direction: column; gap: 20px; height: 800px;">
-          <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <!-- 行2至行4同样处理 -->
-           <!-- 行2 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <!-- 行2至行4同样处理 -->
-           <!-- 行3 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <!-- 行2至行4同样处理 -->
-           <!-- 行4 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <!-- 行2至行4同样处理 -->
+        <div style="width: 400px;">
+          <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 50%; height: auto;">
         </div>
       </div>
 
-      <!-- 第二个组（重复内容简化） -->
-      <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
-        <!-- 此处略去详细内容（可与第一个组结构相同） -->
-         <!-- 上半部分 -->
-        <div style="display: flex; gap: 40px; height: 200px;">
-          <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 50%; height: auto;">
+      <!-- 下半部分 -->
+      <div style="display: flex; flex-direction: column; gap: 20px; height: 800px;">
+        <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
           </div>
-          <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 50%; height: auto;">
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
-
-        <!-- 下半部分 -->
-        <div style="display: flex; flex-direction: column; gap: 20px; height: 800px;">
-          <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
+         <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
           </div>
-          <!-- 行2至行4同样处理 -->
-           <!-- 行2 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
           </div>
-          <!-- 行2至行4同样处理 -->
-           <!-- 行3 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
           </div>
-          <!-- 行2至行4同样处理 -->
-           <!-- 行4 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-wrapper">
-              <video autoplay muted loop playsinline style="width: 100%;">
-                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <!-- 行2至行4同样处理 -->
         </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
+         <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
+         <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
       </div>
-
     </div>
+
+    <!-- 第二个组 -->
+    <div class="group" style="width: 1380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+      <!-- 上半部分 -->
+      <div style="display: flex; gap: 40px; height: 200px;">
+        <div style="width: 400px;">
+          <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 50%; height: auto;">
+        </div>
+        <div style="width: 400px;">
+          <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 50%; height: auto;">
+        </div>
+      </div>
+
+      <!-- 下半部分 -->
+      <div style="display: flex; flex-direction: column; gap: 20px; height: 800px;">
+        <!-- 行1至行4结构同上，重复内容略去 -->
+         <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
+         <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
+         <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
+         <!-- 行1 -->
+        <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- 行2至行4结构相同，重复内容略去 -->
+      </div>
+    </div>
+
   </div>
   
   <button onclick="prevGroup()" class="carousel-btn2 left">❮</button>
@@ -760,7 +758,7 @@
     const carouselContainer = document.querySelector('.carousel-container');
 
     function showGroup(index) {
-      const offset = -index * 1380; // 根据容器宽度设置偏移量
+      const offset = -index * 1380; // 根据组的宽度设置偏移量
       carouselContainer.style.transform = `translateX(${offset}px)`;
     }
 
@@ -811,14 +809,16 @@
 
   .group {
     flex: 0 0 auto;
-    transition: transform 0.5s ease;
   }
 
   .carousel-container {
     display: flex;
+    width: 100%;
+    overflow: hidden;
     transition: transform 0.5s ease; /* 设置滑动效果 */
   }
 </style>
+
 
 
 
