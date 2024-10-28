@@ -39,6 +39,9 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 </head>
@@ -458,6 +461,32 @@
     background-color: #333;
     width: 16px; /* 当前页的圆点变大 */
     height: 16px;
+
+
+
+  .video-container1-firstrow {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .video-item1 {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .video-container1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .carousel-item video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+
   }
   </style>
   
@@ -539,7 +568,120 @@
         nextVideos(i);
       }, autoSlideInterval);
     }
+
+    $(document).ready(function() {
+    // 初始化轮播
+    var carousel = new bootstrap.Carousel(document.getElementById('results-carousel11'), {
+      interval: 16000, // 每个项目的间隔时间
+      wrap: true // 允许循环滑动
+    });
+
+    // 这里可以添加更多自定义功能
+  });
+
     </script>
+
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-3">Qualitative Comparison of Joint Subject Customization and Motion Control</h2>
+      <div id="results-carousel11" class="carousel slide results-carousel" data-bs-ride="carousel" data-interval="16000">
+        <!-- Group 1 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <h5 class="title is-4">Subject</h5>
+                <img src="https://img.alicdn.com/imgextra/i2/O1CN01XSPm4l1NrNoddVDRT_!!6000000001623-0-tps-448-256.jpg" alt="MY ALT TEXT" />
+              </div>        
+              <div class="video-item1">
+                <h5 class="title is-4">Motion</h5>
+                <img src="https://img.alicdn.com/imgextra/i3/O1CN01UtkKvS1jsgUKLRp5r_!!6000000004604-0-tps-1000-710.jpg" alt="MY ALT TEXT" />
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-5 has-text-centered">"A cat is skateboarding on the road"</h5>
+            </div>
+            <div class="video-container1">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/XN1BInAkYOkLQb1dgNoF-GBqCTiF2X8ssgN6_Z_9BX0.mp4" type="video/mp4">
+                </video>
+                <h5 class="title is-4">DreamVideo</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/J_OmoCmfK_gTL84qAthi32u0g7N0oXeeCfxedIrDNcY.mp4" type="video/mp4">
+                </video>
+                <h5 class="title is-4">MotionBooth</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/1omr9U84bdZ_Y0iY-kM2qg1vwzCqkW7Ye2xCj-D4Piw.mp4" type="video/mp4">
+                </video>
+                <h5 class="title is-4">DreamVideo-2</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="carousel-item">
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <h5 class="title is-4">Subject</h5>
+                <img src="https://img.alicdn.com/imgextra/i4/O1CN01Tw3IxF1ROJ8Nl5gYR_!!6000000002101-0-tps-448-256.jpg" alt="MY ALT TEXT" />
+              </div>        
+              <div class="video-item1">
+                <h5 class="title is-4">Motion</h5>
+                <img src="https://img.alicdn.com/imgextra/i3/O1CN01NummAw1lk6IPTu9pH_!!6000000004856-0-tps-1002-710.jpg" alt="MY ALT TEXT" />
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-5 has-text-centered">"A plush toy wolf is walking in the forest"</h5>
+            </div>
+            <div class="video-container1">
+              <div class="video-item1">
+                <video poster="" id="video5" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/NBBjGQxQU9PcBYNFd1UepSJwuCWyuIqMWcZswNLtYBc.mp4" type="video/mp4">
+                </video>
+                <h5 class="title is-4">DreamVideo</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video6" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/KQkwh7MH1_Oto6zCKi5jthIc7hUlc7pd_5qciuHCCFg.mp4" type="video/mp4">
+                </video>
+                <h5 class="title is-4">MotionBooth</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video4" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/VBMQ2t4PiZrIzlN8RPiMjXMJn1UBvpTzpffPvpCEBf4.mp4" type="video/mp4">
+                </video>
+                <h5 class="title is-4">DreamVideo-2</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 控制按钮 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#results-carousel11" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#results-carousel11" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
     
 
 
