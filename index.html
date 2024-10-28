@@ -463,30 +463,6 @@
     height: 16px;
 
 
-
-  .video-container1-firstrow {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-
-  .video-item1 {
-    flex: 1;
-    margin: 0 10px;
-  }
-
-  .video-container1 {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-
-  .carousel-item video {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-
-
   }
   </style>
   
@@ -569,117 +545,8 @@
       }, autoSlideInterval);
     }
 
-    $(document).ready(function() {
-    // 初始化轮播
-    var carousel = new bootstrap.Carousel(document.getElementById('results-carousel11'), {
-      interval: 16000, // 每个项目的间隔时间
-      wrap: true // 允许循环滑动
-    });
-
-    // 这里可以添加更多自定义功能
-  });
-
     </script>
 
-
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-centered has-text-centered">
-      <h2 class="title is-3">Qualitative Comparison of Joint Subject Customization and Motion Control</h2>
-      <div id="results-carousel11" class="carousel slide results-carousel" data-bs-ride="carousel" data-interval="16000">
-        <!-- Group 1 -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="video-container1-firstrow">
-              <div class="video-item1">
-                <h5 class="title is-4">Subject</h5>
-                <img src="./static/images/WechatIMG427.jpg" alt="MY ALT TEXT" />
-              </div>        
-              <div class="video-item1">
-                <h5 class="title is-4">Motion</h5>
-                <img src="./static/images/WechatIMG427.jpg" alt="MY ALT TEXT" />
-              </div>
-            </div>
-            <div class="text-container">
-              <h5 class="title is-5 has-text-centered">"A cat is skateboarding on the road"</h5>
-            </div>
-            <div class="video-container1">
-              <div class="video-item1">
-                <video poster="" id="video2" autoplay controls muted loop>
-                  <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-                </video>
-                <h5 class="title is-4">DreamVideo</h5>
-              </div>
-              <div class="video-item1">
-                <video poster="" id="video3" autoplay controls muted loop>
-                  <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-                </video>
-                <h5 class="title is-4">MotionBooth</h5>
-              </div>
-              <div class="video-item1">
-                <video poster="" id="video1" autoplay controls muted loop>
-                  <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-                </video>
-                <h5 class="title is-4">DreamVideo-2</h5>
-              </div>
-            </div>
-          </div>
-
-          <!-- Group 2 -->
-          <div class="carousel-item">
-            <div class="video-container1-firstrow">
-              <div class="video-item1">
-                <h5 class="title is-4">Subject</h5>
-                <img src="./static/images/WechatIMG427.jpg" alt="MY ALT TEXT" />
-              </div>        
-              <div class="video-item1">
-                <h5 class="title is-4">Motion</h5>
-                <img src="./static/images/WechatIMG427.jpg" alt="MY ALT TEXT" />
-              </div>
-            </div>
-            <div class="text-container">
-              <h5 class="title is-5 has-text-centered">"A plush toy wolf is walking in the forest"</h5>
-            </div>
-            <div class="video-container1">
-              <div class="video-item1">
-                <video poster="" id="video5" autoplay controls muted loop>
-                  <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-                </video>
-                <h5 class="title is-4">DreamVideo</h5>
-              </div>
-              <div class="video-item1">
-                <video poster="" id="video6" autoplay controls muted loop>
-                  <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-                </video>
-                <h5 class="title is-4">MotionBooth</h5>
-              </div>
-              <div class="video-item1">
-                <video poster="" id="video4" autoplay controls muted loop>
-                  <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-                </video>
-                <h5 class="title is-4">DreamVideo-2</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 控制按钮 -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#results-carousel11" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#results-carousel11" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
 
     
