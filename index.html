@@ -550,26 +550,36 @@
 
 <section style="height: 1200px; margin-top: -20px; position: relative; overflow: hidden;">
   <h2 class="title is-4 has-text-centered" style="padding-top: 20px;">Three Baselines</h2>
-  <div class="carousel-wrapper" style="width: 1380px; overflow: hidden; margin: 0 auto;">
+  <div class="carousel-wrapper" style="display: flex; width: 1380px; overflow: hidden; margin: 0 auto;">
+    
+    <!-- 左侧行名列 -->
+    <div class="fixed-labels" style="width: 200px; display: flex; flex-direction: column; justify-content: space-between; padding-right: 20px;">
+      <div style="height: 200px; display: flex; align-items: center; justify-content: center;">Row 1</div>
+      <div style="height: 150px; display: flex; align-items: center; justify-content: center;">Row 2</div>
+      <div style="height: 150px; display: flex; align-items: center; justify-content: center;">Row 3</div>
+      <div style="height: 150px; display: flex; align-items: center; justify-content: center;">Row 4</div>
+      <div style="height: 150px; display: flex; align-items: center; justify-content: center;">Row 5</div>
+    </div>
+
+    <!-- 右侧视频切换区域 -->
     <div class="carousel-container" style="display: flex; transition: transform 0.5s ease;">
       
       <!-- 第一个组 -->
-      <div class="group" style="width: 1380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
-        <!-- 上半部分 -->
+      <div class="group" style="width: 1180px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+        <!-- 上半部分（图片） -->
         <div style="display: flex; gap: 40px; height: 200px;">
           <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 50%; height: auto;">
+            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
           </div>
           <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 50%; height: auto;">
+            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
           </div>
         </div>
 
-        <!-- 下半部分 -->
-        <div style="display: flex; flex-direction: column; gap: 20px; height: 800px;">
-          <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+        <!-- 下半部分（视频行） -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -586,10 +596,9 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
-           <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+          <!-- 其他视频行结构相同，省略重复代码 -->
+           <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -606,10 +615,9 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
-           <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+          <!-- 其他视频行结构相同，省略重复代码 -->
+           <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -626,10 +634,9 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
-           <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+          <!-- 其他视频行结构相同，省略重复代码 -->
+           <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -646,27 +653,26 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
+          <!-- 其他视频行结构相同，省略重复代码 -->
         </div>
       </div>
 
-      <!-- 第二个组 -->
-      <div class="group" style="width: 1380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
-        <!-- 上半部分 -->
+      <!-- 第二个组（内容结构与第一个组相同） -->
+      <div class="group" style="width: 1180px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+        <!-- 上半部分（图片） -->
         <div style="display: flex; gap: 40px; height: 200px;">
           <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 50%; height: auto;">
+            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
           </div>
           <div style="width: 400px;">
-            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 50%; height: auto;">
+            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
           </div>
         </div>
 
-        <!-- 下半部分 -->
-        <div style="display: flex; flex-direction: column; gap: 20px; height: 800px;">
-          <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+        <!-- 下半部分（视频行） -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -683,10 +689,9 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
-           <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+          <!-- 其他视频行结构相同，省略重复代码 -->
+           <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -703,10 +708,9 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
-           <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+          <!-- 其他视频行结构相同，省略重复代码 -->
+           <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -723,10 +727,9 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
-           <!-- 行1 -->
-          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
-            <div style="width: 200px; text-align: center;">Row 1</div>
+          <!-- 其他视频行结构相同，省略重复代码 -->
+           <!-- 行2至行5 -->
+          <div class="video-row" style="display: flex; gap: 40px; height: 150px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 100%;">
                 <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
@@ -743,15 +746,16 @@
               </video>
             </div>
           </div>
-          <!-- 行2至行4结构相同，重复内容略去 -->
+          <!-- 其他视频行结构相同，省略重复代码 -->
         </div>
       </div>
 
     </div>
+    
+    <!-- 切换按钮 -->
+    <button onclick="prevGroup()" class="carousel-btn2 left">❮</button>
+    <button onclick="nextGroup()" class="carousel-btn2 right">❯</button>
   </div>
-  
-  <button onclick="prevGroup()" class="carousel-btn2 left">❮</button>
-  <button onclick="nextGroup()" class="carousel-btn2 right">❯</button>
 
   <script>
     let currentGroupIndex = 0;
@@ -759,7 +763,7 @@
     const carouselContainer = document.querySelector('.carousel-container');
 
     function showGroup(index) {
-      const offset = -index * 1380; // 设置偏移量
+      const offset = -index * 1180; // 只切换右侧内容部分
       carouselContainer.style.transform = `translateX(${offset}px)`;
     }
 
@@ -773,7 +777,7 @@
       showGroup(currentGroupIndex);
     }
 
-    // 初始化显示第一组
+    // 初始化显示第一个组
     showGroup(currentGroupIndex);
   </script>
 </section>
@@ -793,19 +797,22 @@
     border-radius: 50%;
     z-index: 10;
   }
-  
+
   .carousel-btn2.left {
-    left: -10px;
+    right: 200px; /* 按钮定位在右侧内容的两端 */
   }
   
   .carousel-btn2.right {
     right: -10px;
   }
 
+  .fixed-labels {
+    padding-right: 20px;
+  }
+
   .video-row {
     display: flex;
-    align-items: center;
-    gap: 140px; /* 设置视频之间的间距 */
+    gap: 40px; /* 设置视频之间的间距 */
   }
 
   .group {
@@ -814,15 +821,17 @@
 
   .carousel-wrapper {
     width: 1380px;
-    overflow: hidden; /* 仅显示1380px宽的区域 */
+    overflow: hidden;
     margin: 0 auto;
+    display: flex;
   }
 
   .carousel-container {
     display: flex;
-    transition: transform 0.5s ease; /* 设置滑动效果 */
+    transition: transform 0.5s ease; /* 滑动切换效果 */
   }
 </style>
+
 
 
 
