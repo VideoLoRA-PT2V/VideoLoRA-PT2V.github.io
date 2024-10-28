@@ -549,83 +549,191 @@
 
 
 <section style="height: 800px; margin-top: -20px; position: relative;">
-  <h2 class="title is-4 has-text-centered" style="padding-top: 20px;">Three Base Lines</h2>
-  <div class="container" style="width: 1380px; margin: 0 auto; display: flex; overflow: hidden;">
+  <h2 class="title is-4 has-text-centered" style="padding-top: 20px;">Three Baselines</h2>
+  <div class="container" style="width: 1380px; margin: 0 auto; display: flex; overflow: hidden; flex-direction: column; gap: 40px;">
     
     <!-- First Group -->
-    <div class="group" style="flex: 0 0 1380px; display: flex; flex-direction: column; gap: 40px;">
+    <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
       <!-- Upper Part -->
-      <div style="display: flex; gap: 40px;">
-        <!-- Left Side: Image -->
+      <div style="display: flex; gap: 40px; height: 200px;">
         <div style="width: 690px;">
           <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
         </div>
-        <!-- Right Side: Text -->
         <div style="width: 690px;">
-          <h3 style="margin-bottom: 20px;">Base Line Explanation</h3>
-          <p style="line-height: 1.5;">
-            This section provides a detailed explanation of the three base lines. Here you can elaborate on their significance and applications.
-          </p>
+          <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
         </div>
       </div>
+
       <!-- Lower Part -->
-      <div style="display: flex; justify-content: space-between;">
-        <div style="width: 400px; text-align: center;">
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-          </video>
-          <p>VideoLoRA</p>
+      <div style="display: flex; flex-direction: column; gap: 20px; height: 600px;">
+        <!-- Row 1 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div style="width: 400px; text-align: center;">
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-          </video>
-          <p>VideoLoRA</p>
+        <!-- Row 2 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 2</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div style="width: 400px; text-align: center;">
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-          </video>
-          <p>VideoLoRA</p>
+        <!-- Row 3 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 3</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 4</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Second Group -->
-    <div class="group" style="flex: 0 0 1380px; display: flex; flex-direction: column; gap: 40px;">
+    <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
       <!-- Upper Part -->
-      <div style="display: flex; gap: 40px;">
-        <!-- Left Side: Image -->
+      <div style="display: flex; gap: 40px; height: 200px;">
+        <div style="width: 690px;">
+          <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
+        </div>
         <div style="width: 690px;">
           <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
         </div>
-        <!-- Right Side: Text -->
-        <div style="width: 690px;">
-          <h3 style="margin-bottom: 20px;">Base Line Overview</h3>
-          <p style="line-height: 1.5;">
-            Here you can provide an overview of the second group of base lines, emphasizing their differences and similarities.
-          </p>
-        </div>
       </div>
+
       <!-- Lower Part -->
-      <div style="display: flex; justify-content: space-between;">
-        <div style="width: 400px; text-align: center;">
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
-          </video>
-          <p>VideoLoRA</p>
+      <div style="display: flex; flex-direction: column; gap: 20px; height: 600px;">
+        <!-- Row 1 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 1</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div style="width: 400px; text-align: center;">
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
-          </video>
-          <p>VideoLoRA</p>
+        <!-- Row 2 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 2</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div style="width: 400px; text-align: center;">
-          <video autoplay muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
-          </video>
-          <p>VideoLoRA</p>
+        <!-- Row 3 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 3</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div style="display: flex; align-items: center; height: 150px;">
+          <div style="width: 200px; text-align: center;">Row 4</div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="width: 300px; text-align: center;">
+            <video autoplay muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
@@ -684,6 +792,7 @@
     right: -10px;
   }
 </style>
+
 
     
 
