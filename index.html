@@ -548,196 +548,207 @@
     </script>
 
 
-<section style="height: 800px; margin-top: -20px; position: relative;">
+<section style="height: 800px; margin-top: -20px; position: relative; overflow: hidden;">
   <h2 class="title is-4 has-text-centered" style="padding-top: 20px;">Three Baselines</h2>
-  <div class="container" style="width: 1380px; margin: 0 auto; display: flex; overflow: hidden; flex-direction: column; gap: 40px;">
-    
-    <!-- First Group -->
-    <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
-      <!-- Upper Part -->
-      <div style="display: flex; gap: 40px; height: 200px;">
-        <div style="width: 690px;">
-          <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
+  <div class="carousel-container" style="display: flex; transition: transform 0.5s ease;">
+    <div class="container" style="width: 1380px; display: flex; flex-direction: column; gap: 40px;">
+      
+      <!-- 第一个组 -->
+      <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
+        <!-- 上半部分 -->
+        <div style="display: flex; gap: 40px; height: 200px;">
+          <div style="width: 690px;">
+            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
+          </div>
+          <div style="width: 690px;">
+            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
+          </div>
         </div>
-        <div style="width: 690px;">
-          <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
+
+        <!-- 下半部分 -->
+        <div style="display: flex; flex-direction: column; gap: 140px; height: 600px;">
+          <!-- 行1 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!-- 行2至行4同样处理 -->
+           <!-- 行2 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!-- 行2至行4同样处理 -->
+           <!-- 行3 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!-- 行2至行4同样处理 -->
+           <!-- 行4 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!-- 行2至行4同样处理 -->
         </div>
       </div>
 
-      <!-- Lower Part -->
-      <div style="display: flex; flex-direction: column; gap: 20px; height: 600px;">
-        <!-- Row 1 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 1</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-            </video>
+      <!-- 第二个组（重复内容简化） -->
+      <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
+        <!-- 此处略去详细内容（可与第一个组结构相同） -->
+         <!-- 上半部分 -->
+        <div style="display: flex; gap: 40px; height: 200px;">
+          <div style="width: 690px;">
+            <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
           </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-            </video>
+          <div style="width: 690px;">
+            <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
           </div>
         </div>
-        <!-- Row 2 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 2</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
-            </video>
+
+        <!-- 下半部分 -->
+        <div style="display: flex; flex-direction: column; gap: 140px; height: 600px;">
+          <!-- 行1 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
-            </video>
+          <!-- 行2至行4同样处理 -->
+           <!-- 行2 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
-            </video>
+          <!-- 行2至行4同样处理 -->
+           <!-- 行3 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-        </div>
-        <!-- Row 3 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 3</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-            </video>
+          <!-- 行2至行4同样处理 -->
+           <!-- 行4 -->
+          <div class="video-row" style="display: flex; align-items: center; gap: 140px;">
+            <div style="width: 200px; text-align: center;">Row 1</div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-wrapper">
+              <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <!-- Row 4 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 4</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
-            </video>
-          </div>
+          <!-- 行2至行4同样处理 -->
         </div>
       </div>
+
     </div>
-
-    <!-- Second Group -->
-    <div class="group" style="flex: 0 0 800px; display: flex; flex-direction: column; gap: 20px;">
-      <!-- Upper Part -->
-      <div style="display: flex; gap: 40px; height: 200px;">
-        <div style="width: 690px;">
-          <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
-        </div>
-        <div style="width: 690px;">
-          <img src="./static/images/9.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
-        </div>
-      </div>
-
-      <!-- Lower Part -->
-      <div style="display: flex; flex-direction: column; gap: 20px; height: 600px;">
-        <!-- Row 1 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 1</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <!-- Row 2 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 2</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <!-- Row 3 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 3</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <!-- Row 4 -->
-        <div style="display: flex; align-items: center; height: 150px;">
-          <div style="width: 200px; text-align: center;">Row 4</div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div style="width: 300px; text-align: center;">
-            <video autoplay muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
   
   <button onclick="prevGroup()" class="carousel-btn2 left">❮</button>
@@ -746,11 +757,11 @@
   <script>
     let currentGroupIndex = 0;
     const groups = document.querySelectorAll('.group');
+    const carouselContainer = document.querySelector('.carousel-container');
 
     function showGroup(index) {
-      groups.forEach((group, i) => {
-        group.style.display = (i === index) ? 'flex' : 'none';
-      });
+      const offset = -index * 1380; // 根据容器宽度设置偏移量
+      carouselContainer.style.transform = `translateX(${offset}px)`;
     }
 
     function nextGroup() {
@@ -791,7 +802,24 @@
   .carousel-btn2.right {
     right: -10px;
   }
+
+  .video-row {
+    display: flex;
+    align-items: center;
+    gap: 140px; /* 设置视频之间的间距 */
+  }
+
+  .group {
+    flex: 0 0 auto;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease; /* 设置滑动效果 */
+  }
 </style>
+
 
 
     
