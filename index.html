@@ -548,6 +548,142 @@
     </script>
 
 
+<section style="background-color: #eaeaea; color: rgba(0, 0, 0, .7); height: 800px; margin-top: -20px;">
+  <h2 class="title is-4 has-text-centered" style="padding-top: 20px;">Three Base Lines</h2>
+  <div class="container" style="width: 1380px; margin: 0 auto; display: flex; overflow: hidden;">
+    
+    <!-- First Group -->
+    <div class="group" style="flex: 0 0 1380px; display: flex; flex-direction: column; gap: 40px;">
+      <!-- Upper Part -->
+      <div style="display: flex; gap: 40px;">
+        <!-- Left Side: Image -->
+        <div style="width: 690px;">
+          <img src="./static/images/WechatIMG427.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
+        </div>
+        <!-- Right Side: Text -->
+        <div style="width: 690px;">
+          <h3 style="margin-bottom: 20px;">Base Line Explanation</h3>
+          <p style="line-height: 1.5;">
+            This section provides a detailed explanation of the three base lines. Here you can elaborate on their significance and applications.
+          </p>
+        </div>
+      </div>
+      <!-- Lower Part -->
+      <div style="display: flex; justify-content: space-between;">
+        <div style="width: 400px; text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+          </video>
+          <p>VideoLoRA</p>
+        </div>
+        <div style="width: 400px; text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/nailong/gen/ood_video.mp4" type="video/mp4">
+          </video>
+          <p>VideoLoRA</p>
+        </div>
+        <div style="width: 400px; text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/nailong/gen/nailong_video_stru.mp4" type="video/mp4">
+          </video>
+          <p>VideoLoRA</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Group -->
+    <div class="group" style="flex: 0 0 1380px; display: flex; flex-direction: column; gap: 40px;">
+      <!-- Upper Part -->
+      <div style="display: flex; gap: 40px;">
+        <!-- Left Side: Image -->
+        <div style="width: 690px;">
+          <img src="./static/images/WechatIMG427.jpg" alt="Example Image 2" style="width: 100%; height: auto;">
+        </div>
+        <!-- Right Side: Text -->
+        <div style="width: 690px;">
+          <h3 style="margin-bottom: 20px;">Base Line Overview</h3>
+          <p style="line-height: 1.5;">
+            Here you can provide an overview of the second group of base lines, emphasizing their differences and similarities.
+          </p>
+        </div>
+      </div>
+      <!-- Lower Part -->
+      <div style="display: flex; justify-content: space-between;">
+        <div style="width: 400px; text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/Sitic/gen/4.mp4" type="video/mp4">
+          </video>
+          <p>VideoLoRA</p>
+        </div>
+        <div style="width: 400px; text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/Sitic/gen/6.mp4" type="video/mp4">
+          </video>
+          <p>VideoLoRA</p>
+        </div>
+        <div style="width: 400px; text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/Sitic/gen/9.mp4" type="video/mp4">
+          </video>
+          <p>VideoLoRA</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <button onclick="prevGroup()" class="carousel-btn left">❮</button>
+  <button onclick="nextGroup()" class="carousel-btn right">❯</button>
+
+  <script>
+    let currentGroupIndex = 0;
+    const groups = document.querySelectorAll('.group');
+
+    function showGroup(index) {
+      groups.forEach((group, i) => {
+        group.style.display = (i === index) ? 'flex' : 'none';
+      });
+    }
+
+    function nextGroup() {
+      currentGroupIndex = (currentGroupIndex + 1) % groups.length;
+      showGroup(currentGroupIndex);
+    }
+
+    function prevGroup() {
+      currentGroupIndex = (currentGroupIndex - 1 + groups.length) % groups.length;
+      showGroup(currentGroupIndex);
+    }
+
+    // 初始化显示第一组
+    showGroup(currentGroupIndex);
+  </script>
+</section>
+
+<style>
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .carousel-btn.left {
+    left: -10px;
+  }
+  
+  .carousel-btn.right {
+    right: -10px;
+  }
+</style>
 
     
 
