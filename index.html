@@ -554,8 +554,8 @@
     
     <!-- 左侧行名列 -->
     <div class="fixed-labels" style="width: 400px; display: flex; flex-direction: column; justify-content: space-between; padding-right: 20px;">
-      <div style="width: 400px; height: 200px; display: flex; align-items: center; justify-content: center;"></div>
-      <div style="width: 400px; height: 200px; display: flex; align-items: center; justify-content: center;">
+      <div style="width: 400px; height: 166px; display: flex; align-items: center; justify-content: center;"></div>
+      <div style="width: 400px; height: 166px; display: flex; align-items: center; justify-content: center;">
         <div style="width: 300px; justify-content: center;">
           <img src="./static/images/9.jpg" alt="Example Image 1" style="width: 100%; height: auto;">
         </div>
@@ -579,7 +579,7 @@
 
     <!-- 右侧视频切换区域 -->
     <div class="carousel-content-wrapper" style="width: 980px; overflow: hidden;">
-    <div class="carousel-container" style="width: 980px; display: flex; transition: transform 0.5s ease; gap: 90px;">
+    <div class="carousel-container" style="width: 980px; display: flex; transition: transform 0.5s ease; gap: 115px;">
       
       <!-- 第一个组 -->
       <div class="group" style="width: 980px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
@@ -786,7 +786,7 @@
     const carouselContainer = document.querySelector('.carousel-container');
 
     function showGroup(index) {
-      const offset = -index * 1180; // 只切换右侧内容部分
+      const offset = -index * 1095; // 只切换右侧内容部分
       carouselContainer.style.transform = `translateX(${offset}px)`;
     }
 
