@@ -856,10 +856,25 @@
     showGroup(currentGroupIndex);
   }
 
+  // function updateDots(index) {
+  //     dots.forEach(dot => dot.classList.remove('active'));
+  //     dots[index].classList.add('active');
+  //   }
+
   function updateDots(index) {
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
+  dots.forEach((dot, idx) => {
+    dot.classList.remove('active');
+    if (idx === index) {
+      dot.style.width = '20px';  // 活动圆点的宽度
+      dot.style.height = '20px';  // 活动圆点的高度
+    } else {
+      dot.style.width = '15px';  // 其他圆点的宽度
+      dot.style.height = '15px';  // 其他圆点的高度
     }
+  });
+  dots[index].classList.add('active');
+}
+
 
   // 初始化显示第一个组
   showGroup(currentGroupIndex);
@@ -946,11 +961,23 @@
     display: none;
   }
 
-  .dot.active {
-      background-color: #333; /* 活动状态的圆点颜色 */
-      width: 20px;
-      height: 20px;
-    }
+  .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #aaa;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s; /* 添加过渡效果 */
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.dot.active {
+  background-color: #333; /* 活动状态的圆点颜色 */
+  width: 20px;  /* 活动圆点的宽度 */
+  height: 20px; /* 活动圆点的高度 */
+}
+
 
 
 </style>
