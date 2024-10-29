@@ -551,32 +551,6 @@
 <section style="height: 1260px; margin-top: -20px; position: relative; overflow: hidden;">
   <h2 class="title is-4 has-text-centered" style="padding-top: 60px; margin-bottom: 40px;">Qualitative Comparison of three baselines</h2>
   <div class="carousel-wrapper" style="display: flex; width: 1380px; overflow: hidden; margin: 0 auto;">
-    
-    <!-- 左侧图片 -->
-    <!-- <div class="fixed-labels" style="width: 400px; display: flex; flex-direction: column; justify-content: space-between; padding-right: 20px; gap: 20px;">
-      <div style="width: 400px; height: 200px; display: flex; align-items: center; justify-content: center;"></div>
-      <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-        <div style="width: 350px; justify-content: center;">
-          <img src="./static/videos/nailong/nailong_prompt.tiff" alt="Example Image 1" style="width: 100%; height: auto;">
-        </div>
-      </div>
-      <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-        <div style="width: 350px; justify-content: center;">
-          <img src="./static/videos/nailong/nailong_modiey_subject.tiff" alt="Example Image 1" style="width: 100%; height: auto;">
-        </div>
-      </div>
-      <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-        <div style="width: 350px; justify-content: center;">
-          <img src="./static/videos/nailong/nailong_modiey_motion.tiff" alt="Example Image 1" style="width: 100%; height: auto;">
-        </div>
-      </div>
-      <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-        <div style="width: 350px; justify-content: center;">
-          <img src="./static/videos/nailong/nailong_modiey_motion_subject.tiff" alt="Example Image 1" style="width: 100%; height: auto;">
-        </div>
-      </div>
-    </div> -->
-
 
     <!-- 左侧图片 -->
     <div class="fixed-labels">
@@ -838,6 +812,13 @@
         <!-- 切换按钮 -->
       
     </div>
+
+    <!-- 圆点提示 -->
+    <div class="dots" style="text-align: center; margin-top: 10px;">
+      <span class="dot" onclick="showGroup(0)"></span>
+      <span class="dot" onclick="showGroup(1)"></span>
+    </div>
+
     <button onclick="prevGroup()" class="carousel-btn2 left" style="left: 570px; top: 800;">❮</button>
     <button onclick="nextGroup()" class="carousel-btn2 right" style="right: 150px; top: 800px;">❯</button>
 
@@ -859,6 +840,9 @@
     leftImages.forEach((imgGroup, idx) => {
       imgGroup.style.display = idx === index ? 'flex' : 'none';
     });
+
+    // 更新圆点状态
+    updateDots(index);
   }
 
   function nextGroup() {
@@ -871,8 +855,33 @@
     showGroup(currentGroupIndex);
   }
 
+  function updateDots(index) {
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
   // 初始化显示第一个组
   showGroup(currentGroupIndex);
+
+  // 自动轮播
+  setInterval(() => {
+      nextGroup();
+    }, 6000); // 每6秒自动切换
+
+    // 添加圆点样式
+    dots.forEach(dot => {
+      dot.style.width = '15px';
+      dot.style.height = '15px';
+      dot.style.borderRadius = '50%';
+      dot.style.backgroundColor = '#aaa';
+      dot.style.cursor = 'pointer';
+      dot.style.transition = 'width 0.3s, height 0.3s';
+      dot.style.display = 'inline-block';
+      dot.style.margin = '0 5px';
+    });
+
+    // 设置活动状态
+    updateDots(currentGroupIndex);
 
 
 </script>
@@ -935,6 +944,12 @@
   .hidden {
     display: none;
   }
+
+  .dot.active {
+      background-color: #333; /* 活动状态的圆点颜色 */
+      width: 20px;
+      height: 20px;
+    }
 
 
 </style>
