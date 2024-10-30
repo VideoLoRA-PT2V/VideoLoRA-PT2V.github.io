@@ -1189,16 +1189,16 @@
   const carouselContainer1 = document.querySelector('.carousel-container1');
   const dots1 = document.querySelectorAll('.dot1');
 
-  function showGroup1(index) {
-    const offset = -index * 800; // 只切换右侧内容部分
-    carouselContainer1.style.transform = `translateX(${offset}px)`;
+  function showGroup1(index1) {
+    const offset1 = -index1 * 800; // 只切换右侧内容部分
+    carouselContainer1.style.transform = `translateX(${offset1}px)`;
     // 切换左侧图片
-    leftImages1.forEach((imgGroup1, idx) => {
-      imgGroup1.style.display = idx === index ? 'flex' : 'none';
+    leftImages1.forEach((imgGroup1, idx1) => {
+      imgGroup1.style.display = idx1 === index1 ? 'flex' : 'none';
     });
 
     // 更新圆点状态
-    updateDots1(index);
+    updateDots1(index1);
   }
 
   function nextGroup1() {
@@ -1216,10 +1216,10 @@
   //     dots[index].classList.add('active');
   //   }
 
-  function updateDots1(index) {
-  dots1.forEach((dot1, idx) => {
+  function updateDots1(index1) {
+  dots1.forEach((dot1, idx1) => {
     dot1.classList.remove('active');
-    if (idx === index) {
+    if (idx1 === index1) {
       dot1.style.width = '20px';  // 活动圆点的宽度
       dot1.style.height = '20px';  // 活动圆点的高度
     } else {
@@ -1227,7 +1227,7 @@
       dot1.style.height = '15px';  // 其他圆点的高度
     }
   });
-  dots1[index].classList.add('active');
+  dots1[index1].classList.add('active');
 }
 
 
