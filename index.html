@@ -993,7 +993,7 @@
 
     <!-- 左侧图片 -->
     <div class="fixed-labels">
-      <div class="left-images">
+      <div class="left-images1">
         <div class="image-group1" style="display: flex; flex-direction: column; gap: 20px;">
           <div style="width: 400px; height: 180px; display: flex; align-items: center; justify-content: center;"></div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
@@ -1005,7 +1005,7 @@
         </div>
       </div>
 
-      <div class="left-images hidden">
+      <div class="left-images1 hidden">
         <div class="image-group1" style="display: flex; flex-direction: column; gap: 20px;">
           <div style="width: 400px; height: 185px; display: flex; align-items: center; justify-content: center;"></div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
@@ -1020,9 +1020,9 @@
 
     <!-- 右侧视频切换区域 -->
     <div class="carousel-content-wrapper" style="width: 1000px; overflow: hidden;">
-    <div class="carousel-container" style="width: 1000px; display: flex; transition: transform 0.5s ease; gap: 115px;">
+    <div class="carousel-container1" style="width: 1000px; display: flex; transition: transform 0.5s ease; gap: 115px;">
       <!-- 第一个组 -->
-      <div class="group" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+      <div class="group1" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
         <!-- 上半部分（图片） -->
         <div style="display: flex; gap: 40px; height: 200px; justify-content: center;">
           <div style="display: flex; justify-content: center; gap:150px;">
@@ -1092,7 +1092,7 @@
       </div>
 
       <!-- 第二个组（内容结构与第一个组相同） -->
-      <div class="group" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+      <div class="group1" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
         <!-- 上半部分（图片） -->
         <div style="display: flex; gap: 40px; height: 200px; justify-content: center;">
           <div style="display: flex; justify-content: center; gap:150px;">
@@ -1170,8 +1170,8 @@
       <span class="dot1" onclick="showGroup1(1)"></span>
     </div>
 
-    <button onclick="prevGroup1()" class="carousel-btn2 left1" style="left: 565px; top: 800px;">❮</button>
-    <button onclick="nextGroup1()" class="carousel-btn2 right1" style="right: 150px; top: 800px;">❯</button>
+    <button onclick="prevGroup1()" class="carousel-btn21 left1" style="left: 565px; top: 800px;">❮</button>
+    <button onclick="nextGroup1()" class="carousel-btn21 right1" style="right: 150px; top: 800px;">❯</button>
 
     </div>
 
@@ -1184,8 +1184,8 @@
 
 <script>
   let currentGroupIndex1 = 0;
-  const groups1 = document.querySelectorAll('.group');
-  const leftImages1 = document.querySelectorAll('.left-images');
+  const groups1 = document.querySelectorAll('.group1');
+  const leftImages1 = document.querySelectorAll('.left-images1');
   const carouselContainer1 = document.querySelector('.carousel-container');
   const dots1 = document.querySelectorAll('.dot1');
 
@@ -1260,7 +1260,7 @@
 
 <style>
 
-.carousel-btn2 {
+.carousel-btn21 {
     position: absolute;
     top: 50%;
     width: 70px;
@@ -1275,12 +1275,21 @@
     z-index: 10;
   }
 
-  .carousel-btn2.left1 {
+  .carousel-btn21.left1 {
     left: 10px; /* 按钮固定在左侧 */
   }
   
-  .carousel-btn2.right1 {
+  .carousel-btn21.right1 {
     right: 10px; /* 按钮固定在右侧 */
+  }
+
+  .group1 {
+    flex: 0 0 auto;
+  }
+
+  .carousel-container1 {
+    display: flex;
+    transition: transform 0.5s ease; /* 滑动切换效果 */
   }
 
 .dot1 {
