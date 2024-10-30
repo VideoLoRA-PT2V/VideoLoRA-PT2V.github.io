@@ -593,7 +593,7 @@
 
     <!-- 右侧视频切换区域 -->
     <div class="carousel-content-wrapper" style="width: 1000px; overflow: hidden;">
-    <div class="carousel-container" style="width: 1000px; display: flex; transition: transform 0.5s ease; gap: 115px;">
+    <div class="carousel-container1" style="width: 1000px; display: flex; transition: transform 0.5s ease; gap: 115px;">
       <!-- 第一个组 -->
       <div class="group" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
         <!-- 上半部分（图片） -->
@@ -835,7 +835,7 @@
   let currentGroupIndex = 0;
   const groups = document.querySelectorAll('.group');
   const leftImages = document.querySelectorAll('.left-images');
-  const carouselContainer = document.querySelector('.carousel-container');
+  const carouselContainer = document.querySelector('.carousel-container1');
   const dots = document.querySelectorAll('.dot');
 
   function showGroup(index) {
@@ -956,7 +956,7 @@
     overflow: hidden;
   }
 
-  .carousel-container {
+  .carousel-container1 {
     display: flex;
     transition: transform 0.5s ease; /* 滑动切换效果 */
   }
@@ -997,7 +997,7 @@
 
     <!-- 左侧图片 -->
     <div class="fixed-labels">
-      <div class="left-images">
+      <div class="left-images1">
         <div class="image-group" style="display: flex; flex-direction: column; gap: 20px;">
           <div style="width: 400px; height: 180px; display: flex; align-items: center; justify-content: center;"></div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
@@ -1009,7 +1009,7 @@
         </div>
       </div>
 
-      <div class="left-images hidden">
+      <div class="left-images1 hidden">
         <div class="image-group" style="display: flex; flex-direction: column; gap: 20px;">
           <div style="width: 400px; height: 185px; display: flex; align-items: center; justify-content: center;"></div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
@@ -1024,9 +1024,9 @@
 
     <!-- 右侧视频切换区域 -->
     <div class="carousel-content-wrapper" style="width: 1000px; overflow: hidden;">
-    <div class="carousel-container" style="width: 1000px; display: flex; transition: transform 0.5s ease; gap: 115px;">
+    <div class="carousel-container1" style="width: 1000px; display: flex; transition: transform 0.5s ease; gap: 115px;">
       <!-- 第一个组 -->
-      <div class="group" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+      <div class="group1" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
         <!-- 上半部分（图片） -->
         <div style="display: flex; gap: 40px; height: 200px; justify-content: center;">
           <div style="display: flex; justify-content: center; gap:150px;">
@@ -1096,7 +1096,7 @@
       </div>
 
       <!-- 第二个组（内容结构与第一个组相同） -->
-      <div class="group" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+      <div class="group1" style="width: 1000px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
         <!-- 上半部分（图片） -->
         <div style="display: flex; gap: 40px; height: 200px; justify-content: center;">
           <div style="display: flex; justify-content: center; gap:150px;">
@@ -1187,11 +1187,11 @@
 
 
 <script>
-  let currentGroupIndex = 0;
-  const groups = document.querySelectorAll('.group');
-  const leftImages = document.querySelectorAll('.left-images');
-  const carouselContainer = document.querySelector('.carousel-container');
-  const dots = document.querySelectorAll('.dot');
+  let currentGroupIndex1 = 0;
+  const groups1 = document.querySelectorAll('.group1');
+  const leftImages1 = document.querySelectorAll('.left-images1');
+  const carouselContainer1 = document.querySelector('.carousel-container1');
+  const dots1 = document.querySelectorAll('.dot1');
 
   function showGroup(index) {
     const offset = -index * 1110; // 只切换右侧内容部分
@@ -1295,7 +1295,7 @@
     gap: 40px; /* 设置视频之间的间距 */
   }
 
-  .group {
+  .group1 {
     flex: 0 0 auto;
   }
 
@@ -1311,7 +1311,7 @@
     overflow: hidden;
   }
 
-  .carousel-container {
+  .carousel-container1 {
     display: flex;
     transition: transform 0.5s ease; /* 滑动切换效果 */
   }
@@ -1320,7 +1320,7 @@
     display: none;
   }
 
-  .dot {
+  .dot1 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
