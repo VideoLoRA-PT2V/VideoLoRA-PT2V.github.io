@@ -1166,12 +1166,12 @@
 
     <!-- 圆点提示 -->
     <div class="dots" style="text-align: center; margin-top: 10px;">
-      <span class="dot" onclick="showGroup(0)"></span>
-      <span class="dot" onclick="showGroup(1)"></span>
+      <span class="dot" onclick="showGroup1(0)"></span>
+      <span class="dot" onclick="showGroup1(1)"></span>
     </div>
 
-    <button onclick="prevGroup()" class="carousel-btn2 left" style="left: 565px; top: 800px;">❮</button>
-    <button onclick="nextGroup()" class="carousel-btn2 right" style="right: 150px; top: 800px;">❯</button>
+    <button onclick="prevGroup1()" class="carousel-btn2 left" style="left: 565px; top: 800px;">❮</button>
+    <button onclick="nextGroup1()" class="carousel-btn2 right" style="right: 150px; top: 800px;">❯</button>
 
     </div>
 
@@ -1189,26 +1189,26 @@
   const carouselContainer1 = document.querySelector('.carousel-container');
   const dots1 = document.querySelectorAll('.dot');
 
-  function showGroup(index) {
+  function showGroup1(index) {
     const offset = -index * 800; // 只切换右侧内容部分
     carouselContainer1.style.transform = `translateX(${offset}px)`;
     // 切换左侧图片
-    leftImages1.forEach((imgGroup, idx) => {
-      imgGroup.style.display = idx === index ? 'flex' : 'none';
+    leftImages1.forEach((imgGroup1, idx) => {
+      imgGroup1.style.display = idx === index ? 'flex' : 'none';
     });
 
     // 更新圆点状态
-    updateDots(index);
+    updateDots1(index);
   }
 
-  function nextGroup() {
+  function nextGroup1() {
     currentGroupIndex1 = (currentGroupIndex1 + 1) % groups1.length;
     showGroup(currentGroupIndex1);
   }
 
-  function prevGroup() {
+  function prevGroup1() {
     currentGroupIndex1 = (currentGroupIndex1 - 1 + groups1.length) % groups1.length;
-    showGroup(currentGroupIndex1);
+    showGroup1(currentGroupIndex1);
   }
 
   // function updateDots(index) {
@@ -1216,7 +1216,7 @@
   //     dots[index].classList.add('active');
   //   }
 
-  function updateDots(index) {
+  function updateDots1(index) {
   dots1.forEach((dot, idx) => {
     dot.classList.remove('active');
     if (idx === index) {
@@ -1232,7 +1232,7 @@
 
 
   // 初始化显示第一个组
-  showGroup(currentGroupIndex1);
+  showGroup1(currentGroupIndex1);
 
   // 自动轮播
   setInterval(() => {
@@ -1252,7 +1252,7 @@
     });
 
     // 设置活动状态
-    updateDots(currentGroupIndex1);
+    updateDots1(currentGroupIndex1);
 
 
 </script>
