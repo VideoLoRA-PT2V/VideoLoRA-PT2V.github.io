@@ -1165,13 +1165,13 @@
     </div>
 
     <!-- 圆点提示 -->
-    <div class="dots" style="text-align: center; margin-top: 10px;">
-      <span class="dot" onclick="showGroup1(0)"></span>
-      <span class="dot" onclick="showGroup1(1)"></span>
+    <div class="dots1" style="text-align: center; margin-top: 10px;">
+      <span class="dot1" onclick="showGroup1(0)"></span>
+      <span class="dot1" onclick="showGroup1(1)"></span>
     </div>
 
-    <button onclick="prevGroup1()" class="carousel-btn2 left" style="left: 565px; top: 800px;">❮</button>
-    <button onclick="nextGroup1()" class="carousel-btn2 right" style="right: 150px; top: 800px;">❯</button>
+    <button onclick="prevGroup1()" class="carousel-btn2 left1" style="left: 565px; top: 800px;">❮</button>
+    <button onclick="nextGroup1()" class="carousel-btn2 right1" style="right: 150px; top: 800px;">❯</button>
 
     </div>
 
@@ -1187,7 +1187,7 @@
   const groups1 = document.querySelectorAll('.group');
   const leftImages1 = document.querySelectorAll('.left-images');
   const carouselContainer1 = document.querySelector('.carousel-container');
-  const dots1 = document.querySelectorAll('.dot');
+  const dots1 = document.querySelectorAll('.dot1');
 
   function showGroup1(index) {
     const offset = -index * 800; // 只切换右侧内容部分
@@ -1217,14 +1217,14 @@
   //   }
 
   function updateDots1(index) {
-  dots1.forEach((dot, idx) => {
-    dot.classList.remove('active');
+  dots1.forEach((dot1, idx) => {
+    dot1.classList.remove('active');
     if (idx === index) {
-      dot.style.width = '20px';  // 活动圆点的宽度
-      dot.style.height = '20px';  // 活动圆点的高度
+      dot1.style.width = '20px';  // 活动圆点的宽度
+      dot1.style.height = '20px';  // 活动圆点的高度
     } else {
-      dot.style.width = '15px';  // 其他圆点的宽度
-      dot.style.height = '15px';  // 其他圆点的高度
+      dot1.style.width = '15px';  // 其他圆点的宽度
+      dot1.style.height = '15px';  // 其他圆点的高度
     }
   });
   dots1[index].classList.add('active');
@@ -1241,14 +1241,14 @@
 
     // 添加圆点样式
     dots1.forEach(dot => {
-      dot.style.width = '15px';
-      dot.style.height = '15px';
-      dot.style.borderRadius = '50%';
-      dot.style.backgroundColor = '#aaa';
-      dot.style.cursor = 'pointer';
-      dot.style.transition = 'width 0.3s, height 0.3s';
-      dot.style.display = 'inline-block';
-      dot.style.margin = '0 5px';
+      dot1.style.width = '15px';
+      dot1.style.height = '15px';
+      dot1.style.borderRadius = '50%';
+      dot1.style.backgroundColor = '#aaa';
+      dot1.style.cursor = 'pointer';
+      dot1.style.transition = 'width 0.3s, height 0.3s';
+      dot1.style.display = 'inline-block';
+      dot1.style.margin = '0 5px';
     });
 
     // 设置活动状态
@@ -1257,6 +1257,50 @@
 
 </script>
 </section>
+
+<style>
+
+.carousel-btn2 {
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  .carousel-btn2.left1 {
+    left: 10px; /* 按钮固定在左侧 */
+  }
+  
+  .carousel-btn2.right1 {
+    right: 10px; /* 按钮固定在右侧 */
+  }
+
+.dot1 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #aaa;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s; /* 添加过渡效果 */
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.dot1.active {
+  background-color: #333; /* 活动状态的圆点颜色 */
+  width: 20px;  /* 活动圆点的宽度 */
+  height: 20px; /* 活动圆点的高度 */
+}
+
+</style>
 
 
 
