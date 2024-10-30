@@ -826,7 +826,7 @@
 
   </div>
   <p style="text-align: justify; padding-top: 20px; display: flex; justify-content: center;">
-    <strong>PT2V-Bench Pipeline.</strong> We collected video materials of 20 topics through short video platforms and our own videos. For each video, we obtained preliminary description words through multiple rounds of dialogue with CogVLM2-Video, and then manually modified and polished them to form structured caption, and finally formed video-text pairs. We also provided corresponding test captions for each subject. Finally, our PT2V-Bench was formed.
+    The above is a qualitative comparison of three baselines that shows two subjects, "Nailong" and "Qizai". We use image data for training ImageLoRA, which is divided into directly inferring 48 frames of video (left column) and generating a frame of image and then generating video through i2v (middle column). Meanwhle, we use video data for training VideoLoRA and reconstruct the content in the training set (top row), and the next three rows from top to bottom are, modifying the subject, motion and regenerating both of the structured caption. The result is obvious. VideoLoRA can captures the unique motion features of Nailong and Qizai in the caption and reproduce them. For example, Nailong dances sideways, and Qizai walks upright forward.
   </p>
 
 
