@@ -548,7 +548,7 @@
     </script>
 
 
-<section style="height: 1400px; margin-top: -20px; position: relative; overflow: hidden;">
+<section style="height: 1500px; margin-top: -20px; position: relative; overflow: hidden;">
   <h2 class="title is-3 is-centered" style="padding-top: 60px; margin-bottom: 40px; display: flex; justify-content: center;">Qualitative Comparison of three baselines</h2>
   <div class="carousel-wrapper" style="display: flex; width: 1380px; overflow: hidden; margin: 0 auto;">
 
@@ -825,7 +825,7 @@
     </div>
 
   </div>
-  <p style="text-align: justify; padding-top: 20px; display: flex; justify-content: center; padding-left: 180px; padding-right: 180px;">
+  <p style="text-align: justify; max-width: 1380px; margin: 20px auto; padding: 10px; background-color: rgba(255, 255, 255, 0.8); border-radius: 5px; text-align: left;"">
     The above is a qualitative comparison of three baselines that shows two subjects, "Nailong" and "Qizai". We use image data for training ImageLoRA, which is divided into directly inferring 48 frames of video (left column) and generating a frame of image and then generating video through i2v (middle column). Meanwhle, we use video data for training VideoLoRA and reconstruct the content in the training set (top row), and the next three rows from top to bottom are, modifying the subject, motion and regenerating both of the structured caption. The result is obvious. VideoLoRA can captures the unique motion features of Nailong and Qizai in the caption and reproduce them. For example, Nailong dances sideways, and Qizai walks upright forward.
   </p>
 
@@ -987,7 +987,7 @@
 </style>
 
 
-<section style="height: 1400px; margin-top: -20px; position: relative; overflow: hidden;">
+<section style="height: 1050px; margin-top: -20px; position: relative; overflow: hidden;">
   <h2 class="title is-3 is-centered" style="padding-top: 60px; margin-bottom: 40px; display: flex; justify-content: center;">Qualitative Comparison of three baselines (OOD)</h2>
   <div class="carousel-wrapper" style="display: flex; width: 1380px; overflow: hidden; margin: 0 auto;">
 
@@ -997,10 +997,10 @@
         <div class="image-group1" style="display: flex; flex-direction: column; gap: 20px;">
           <div style="width: 400px; height: 180px; display: flex; align-items: center; justify-content: center;"></div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-            <img src="./static/videos/nailong/nailong_prompt.tiff" alt="Example Image 1" style="width: 100%; height: auto;">
+            <img src="./static/videos/nailong/Nailong_ood.tiff" alt="Example Image 1" style="width: 100%; height: auto;">
           </div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-            <img src="./static/videos/nailong/nailong_modiey_subject.tiff" alt="Example Image 2" style="width: 100%; height: auto;">
+            <img src="./static/videos/nailong/Nailong_panda_ood.tiff" alt="Example Image 2" style="width: 100%; height: auto;">
           </div>
         </div>
       </div>
@@ -1009,10 +1009,10 @@
         <div class="image-group1" style="display: flex; flex-direction: column; gap: 20px;">
           <div style="width: 400px; height: 185px; display: flex; align-items: center; justify-content: center;"></div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-            <img src="./static/videos/Qizai/Qizai_id.tiff" alt="Example Image 5" style="width: 100%; height: auto;">
+            <img src="./static/videos/Qizai/Qizai_ood.tiff" alt="Example Image 5" style="width: 100%; height: auto;">
           </div>
           <div style="width: 400px; display: flex; align-items: center; justify-content: center;">
-            <img src="./static/videos/Qizai/Qizai_subject.tiff" alt="Example Image 6" style="width: 100%; height: auto;">
+            <img src="./static/videos/Qizai/Qizai_bear_ood.tiff" alt="Example Image 6" style="width: 100%; height: auto;">
           </div>
         </div>
       </div>
@@ -1054,17 +1054,17 @@
           <div class="video-row" style="display: flex; gap: 100px; height: 200px;">
             <div class="video-wrapper" style="position: relative;">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/nailong/gen/image_one/id.mp4" type="video/mp4">
+                <source src="./static/videos/nailong/ood/image_one.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/nailong/gen/image_two/image_two_id.mp4" type="video/mp4">
+                <source src="./static/videos/nailong/ood/image_two.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/nailong/gen/nailong.mp4" type="video/mp4">
+                <source src="./static/videos/nailong/ood/video.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -1073,17 +1073,17 @@
           <div class="video-row" style="display: flex; gap: 100px; height: 200px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/nailong/gen/image_one/panda.mp4" type="video/mp4">
+                <source src="./static/videos/nailong/ood/Nailong_panda_image_one.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/nailong/gen/image_two/image_two_subject.mp4" type="video/mp4">
+                <source src="./static/videos/nailong/ood/nailong_panda_image_two.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/nailong/gen/panda.mp4" type="video/mp4">
+                <source src="./static/videos/nailong/ood/Nailong_panda_video.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -1124,17 +1124,17 @@
           <div class="video-row" style="display: flex; gap: 100px; height: 200px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/Qizai/image_one/image_one.mp4" type="video/mp4">
+                <source src="./static/videos/Qizai/ood/Qizai_image_one.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/Qizai/image_two/Qizai_twostage.mp4" type="video/mp4">
+                <source src="./static/videos/Qizai/ood/Qizai_ood_image_two.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/Qizai/video/Qizai_id.mp4" type="video/mp4">
+                <source src="./static/videos/Qizai/ood/Qizai_video.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -1143,17 +1143,17 @@
           <div class="video-row" style="display: flex; gap: 100px; height: 200px;">
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/Qizai/image_one/modiey_subject.mp4" type="video/mp4">
+                <source src="./static/videos/Qizai/ood/Qizai_bear_image_one.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/Qizai/image_two/Qizai_subject.mp4" type="video/mp4">
+                <source src="./static/videos/Qizai/ood/Qizai_bear_image_two.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-wrapper">
               <video autoplay muted loop playsinline style="width: 250px;">
-                <source src="./static/videos/Qizai/video/modiey_subject.mp4" type="video/mp4">
+                <source src="./static/videos/Qizai/ood/Qizai_bear_video.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -1175,11 +1175,15 @@
 
     </div>
 
-    <p style="text-align: justify; padding-top: 20px; display: flex; justify-content: center; padding-left: 180px; padding-right: 180px;">
-      The above is a qualitative comparison of three baselines that shows two subjects, "Nailong" and "Qizai". We use image data for training ImageLoRA, which is divided into directly inferring 48 frames of video (left column) and generating a frame of image and then generating video through i2v (middle column). Meanwhle, we use video data for training VideoLoRA and reconstruct the content in the training set (top row), and the next three rows from top to bottom are, modifying the subject, motion and regenerating both of the structured caption. The result is obvious. VideoLoRA can captures the unique motion features of Nailong and Qizai in the caption and reproduce them. For example, Nailong dances sideways, and Qizai walks upright forward.
-    </p>
-
   </div>
+  <!-- <p style="text-align: justify; padding-top: 20px; display: flex; justify-content: center; padding-left: 180px; padding-right: 180px;">
+    The above is a qualitative comparison of three baselines that shows two subjects, "Nailong" and "Qizai". We use image data for training ImageLoRA, which is divided into directly inferring 48 frames of video (left column) and generating a frame of image and then generating video through i2v (middle column). Meanwhle, we use video data for training VideoLoRA and reconstruct the content in the training set (top row), and the next three rows from top to bottom are, modifying the subject, motion and regenerating both of the structured caption. The result is obvious. VideoLoRA can captures the unique motion features of Nailong and Qizai in the caption and reproduce them. For example, Nailong dances sideways, and Qizai walks upright forward.
+  </p> -->
+
+  <!-- 限制 p 标签宽度并居中 -->
+  <p style="text-align: justify; max-width: 1380px; margin: 20px auto; padding: 10px; background-color: rgba(255, 255, 255, 0.8); border-radius: 5px; text-align: left;"">
+    The above is a qualitative comparison of customizing new videos (out of domain) using three baselines. We still select the two subjects "Nailong" and "Qizai". The top row is the customized video of the subject, and the bottom row is the result of migrating the motion. From the customized results of Nailong, it can be seen that the customized video of VideoLoRA can well capture the "slow" and "jumping" movement characteristics of Nailong, and can also be successfully migrated to panda. Although the two ImageLoRA can also customize good videos. But they cannot capture the unique motion of Nailong. The customized results of Qizai are more obvious. Although we also used several images of Qizai walking upright to train ImageLoRA, the results of the two ImageLoRA did not generate Qizai walking upright, let alone migrate this motion to polar bears. But VideoLoRA captured this motion very well.
+  </p>
 
 
 
@@ -1312,24 +1316,25 @@
 }
 
 </style>
-
+¨
 
 <!--ab_study-->
 
 <!-- Method. -->
-<section class="hero is-small" style="margin-top:-30px; margin-bottom:-30px;">
+<section class="hero is-small" style="margin-top:-30px; margin-bottom:-30px; height: 1200px;">
   <div class="container is-max-desktop" style="display: flex; justify-content: center;">
-    <div class="hero-body" style="width: 1430px; height: 868px;">
+    <div class="hero-body" style="width: 1400px; height: 868px;">
       <div class="columns is-centered has-text-centered">
-        <div class="column" style="width: 1430px; padding-top: 60px !important; padding-bottom: 0px !important;">
+        <div class="column" style="width: 1400px; padding-top: 60px !important; padding-bottom: 0px !important;">
           <h2 class="title is-3 is-centered">Qualitative comparison of Structured Caption ablation</h2>
-          <video autoplay muted loop playsinline style="width: 100%;">
+          <video autoplay muted loop playsinline style="width: 80%;">
             <source src="./static/videos/ab.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      <p style="text-align: justify;">
-        <strong>PT2V-Bench Pipeline.</strong> We collected video materials of 20 topics through short video platforms and our own videos. For each video, we obtained preliminary description words through multiple rounds of dialogue with CogVLM2-Video, and then manually modified and polished them to form structured caption, and finally formed video-text pairs. We also provided corresponding test captions for each subject. Finally, our PT2V-Bench was formed.
+      <p style="text-align: justify; max-width: 1280px; margin: 20px auto; padding: 10px; background-color: rgba(255, 255, 255, 0.8); border-radius: 5px; text-align: left;"">
+        The three groups from top to bottom represent personalization using image data, personalization using video data, and video-to-video editing of personalized videos.
+        In the two groups using VideoLoRA and V2V, it can be clearly seen that the video subject and text fidelity customized using structured captions are better.
       </p>
     </div>
   </div>
