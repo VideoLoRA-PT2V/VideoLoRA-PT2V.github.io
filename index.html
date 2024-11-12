@@ -1364,7 +1364,7 @@
         </div>
       </div>
       <p style="text-align: justify; max-width: 1280px; margin: 20px auto; padding: 10px; background-color: rgba(255, 255, 255, 0.8); border-radius: 5px; text-align: left;"">
-        The three groups from top to bottom represent personalization using image data, personalization using video data, and video-to-video editing of personalized videos.
+        The three groups from top to bottom represent personalization with ImageLoRA, VideoLoRA, and video-to-video of personalized videos.
         In the two groups using VideoLoRA and V2V, it can be clearly seen that the video subject and text fidelity customized using structured captions are better.
       </p>
     </div>
@@ -1384,7 +1384,7 @@
             To conclude, we have introduced three simple baselines for PT2V: ImageLoRA and ImageLoRA (T2I+I2V) for image-based customization, and VideoLoRA for video-based customization. We find that both approaches of ImageLoRA can generate high-quality personalized videos. However, we recommend VideoLoRA since it better captures subject-specific motion patterns. VideoLoRA enables more effective motion personalization that are inherent in the video data, which is absent in static images.
 Additionally, we have proposed a structured caption approach, a video tag optimization strategy that refines descriptions to facilitate both subject and motion personalization.
 Finally, we have presented PT2V-Bench, a personalized video dataset comprising videos of 20 subjects, along with structured and configurable captions. This dataset will be publicly released on our project page to support further research in personalized video generation.
-<strong>Limitations and Future Work.</strong> Our approach employs \texttt{"\{\}"} notation to encapsulate structured components, adding new identifiers to the text. However, we fine-tuned only the transformer, leaving the text encoder unchanged, which may limit text comprehension. Additionally, due to limited data, PT2V-Bench contains 20 subjects with 5–10 videos each, making it relatively small. Future work will focus on developing advanced personalized video customization methods and expanding the dataset.
+<strong>Limitations and Future Work.</strong> Our approach employs “{}” notation to encapsulate structured components, adding new identifiers to the text. However, we fine-tuned only the transformer, leaving the text encoder unchanged, which may limit text comprehension. Additionally, due to limited data, PT2V-Bench contains 20 subjects with 5–10 videos each, making it relatively small. Future work will focus on developing advanced personalized video customization methods and expanding the dataset.
           </p>
         </div>
       </div>
