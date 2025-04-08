@@ -73,13 +73,13 @@
 
           <div class="is-size-5 publication-authors" style="height: 40px !important;">
             <span class="author-block">School of Computer Science and
-Technology, Xidian University </span><sup>1</sup>,
-            <span class="author-block">Alibaba Group</span><sup>2</sup>
+Technology, Xidian University </span><sup>1</sup>,<br>
+            <span class="author-block">Alibaba Group</span><sup>2</sup>,
             <span class="author-block">SenseTime Research</span><sup>3</sup>
             <!-- <span class="author-block">Anonymous</span> -->
           </div>
 
-          <div class="column has-text-centered" style="padding-top: 20px !important;">
+          <div class="column has-text-centered" style="padding-top: 70px !important;">
             <div class="publication-links">
               <!-- Paper Link. -->
               <span class="link-block">
@@ -140,7 +140,7 @@ Technology, Xidian University </span><sup>1</sup>,
         <h2 class="title is-3" style="height: 20px; !important;">Abstract</h2>
         <div class="content has-text-justified" style="font-size: 1.25em;">
           <p>
-            Personalized text-to-video (PT2V) generation aims to adapt a pre-trained text-to-video model to generate customized videos of a unique subject or motion, via fine-tuning. To handle this problem, most of existing methods either employ image-based customization, or upgrade it with motion customization, or leverage large-scale video datasets to train subject-to-video generation. Though effective at large, these methods are not easily comparable to each other due to different backbones and implementations. In this work, we systematically analyze PT2V under the setting of LoRA fine-tuning by comparing three basic approaches among which we suggest a simple baseline VideoLoRA. In particular, we introduce a structured caption strategy to optimize video text descriptions and enable both subject and motion personalization. In addition, to facilitate evaluation, we curate a video dataset called PT2V-Bench, which includes videos and structured captions for 20 distinct subjects. Our results demonstrate that all three basic approaches can generate high-quality personalized videos, while VideoLoRA even captures the unique motion of the subject which is not observed in state-of-the-art methods.
+            Personalized text-to-video (PT2V) generation aims to adapt a pre-trained text-to-video model to generate customized videos of a unique subject or motion, via fine-tuning. To handle this problem, most of existing methods either employ image-based customization, or upgrade it with motion customization, or leverage large-scale video datasets to train subject-to-video generation. Though effective at large, these methods are not easily comparable to each other due to different backbones and implementations. In this work, we systematically analyze PT2V in the LoRA fine-tuning setting based on the diffusion transformer architecture by comparing three basic approaches among which we suggest a simple baseline VideoLoRA. In particular, we introduce a structured caption strategy to optimize video text descriptions and employ mixed-data fine-tuning. In addition, to facilitate evaluation, we curate a video dataset called PT2V-Bench, which includes videos and structured captions for 20 distinct subjects. Our results demonstrate that all three basic approaches can generate high-quality personalized videos, while VideoLoRA even captures the unique motion of the subject which is not observed in state-of-the-art methods.
           </p>
         </div>
       </div>
@@ -155,17 +155,14 @@ Technology, Xidian University </span><sup>1</sup>,
     <div class="hero-body" style="width: 1430px; height: 800px;">
       <div class="columns is-centered has-text-centered">
         <div class="column" style="width: 1430px; padding-top: 60px !important; padding-bottom: 0px !important;">
-          <h2 class="title is-3 is-centered">PT2V-Bench (Structured Caption)</h2>
+          <h2 class="title is-3 is-centered">Method</h2>
           <div class="publication-img" style="display: flex; justify-content: center; gap: 0; max-width: 1430px; overflow: hidden;">
-            <img src="./static/images/video_collection.gif" style="height: 480px; width: auto; margin: 0; padding: 0;" />
-            <img src="./static/images/Multi.gif" style="height: 480px; width: auto; margin: 0; padding: 0;" />
-            <img src="./static/images/per_caption.gif" style="height: 480px; width: auto; margin: 0; padding: 0;" />
-            <img src="./static/images/PT2V-Bench.gif" style="height: 480px; width: auto; margin: 0; padding: 0;" />
+            <img src="./static/images/structured_prompt.tiff" style="height: 480px; width: auto; margin: 0; padding: 0;" />
           </div>
         </div>
       </div>
       <p style="text-align: justify;">
-        <strong>PT2V-Bench Pipeline.</strong> We collect videos of 20 subjects through short video platforms or DIY. For each video, we obtain preliminary text descriptions through multiple rounds of dialogue with CogVLM2-Video, and manually polish them to form structured captions. For each caption, we also provide candidate items for each structured part to form versatile test captions.
+        <strong>Pipeline.</strong> We collect videos of 20 subjects through short video platforms or DIY. Each video is automatically labeled with structured questions through Video-LLM to get the structured caption. And We introduced regularized images data to fine-tune the video diffusion transformer with LoRA for customization.
       </p>
     </div>
   </div>
@@ -1384,10 +1381,8 @@ Technology, Xidian University </span><sup>1</sup>,
         <h2 class="title is-3" style="height: 20px; !important;">Conclusions</h2>
         <div class="content has-text-justified" style="font-size: 1.25em;">
           <p>
-            To conclude, we have introduced three simple baselines for PT2V: ImageLoRA and ImageLoRA (T2I+I2V) for image-based customization, and VideoLoRA for video-based customization. We find that both approaches of ImageLoRA can generate high-quality personalized videos. However, we recommend VideoLoRA since it better captures subject-specific motion patterns. VideoLoRA enables more effective motion personalization that are inherent in the video data, which is absent in static images.
-Additionally, we have proposed a structured caption approach, a video tag optimization strategy that refines descriptions to facilitate both subject and motion personalization.
-Finally, we have presented PT2V-Bench, a personalized video dataset comprising videos of 20 subjects, along with structured and configurable captions. This dataset will be publicly released on our project page to support further research in personalized video generation.
-<strong>Limitations and Future Work.</strong> Our approach employs “{}” notation to encapsulate structured components, adding new identifiers to the text. However, we fine-tuned only the transformer, leaving the text encoder unchanged, which may limit text comprehension. Additionally, due to limited data, PT2V-Bench contains 20 subjects with 5–10 videos each, making it relatively small. Future work will focus on developing advanced personalized video customization methods and expanding the dataset.
+            To conclude, we have introduced three simple baselines for PT2V: ImageLoRA and ImageLoRA (T2I+I2V) for image-based customization, and VideoLoRA for video-based customization. We find that both approaches of ImageLoRA can generate high-quality personalized videos. However, we recommend VideoLoRA since it better captures subject-specific motion patterns. VideoLoRA enables more effective motion personalization that are inherent in the video data, which is absent in static images. Additionally, we have proposed a structured caption approach and mixed data fine-tuning proposal. Structured caption is a video tag optimization strategy that refines descriptions to facilitate both subject and motion personalization while mixed fine-tuning can balance the generalization and training speed of the fine-tuned model. Finally, we have presented PT2V-Bench, a personalized video dataset comprising videos of 20 subjects, along with structured and configurable captions. This dataset will be publicly released on our project page to support further research in personalized video generation.<br>
+<strong>Limitations and Future Work.</strong> Our method uses "{}" notation to structure text, introducing new identifiers. However, we fine-tuned only the transformer, keeping the text encoder unchanged, which may restrict text understanding. Moreover, PT2V-Bench is limited to 20 subjects with 5–10 videos each. Future work will explore improved personalized video customization and dataset expansion.
           </p>
         </div>
       </div>
